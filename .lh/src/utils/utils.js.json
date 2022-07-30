@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/utils/utils.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1659185157684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659185177888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+export function extendForSelect(obj: BaseObj, label = 'title', value = 'id') {\r\n+  return { ...obj, label: obj[label], value: obj[value] };\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659185183977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-export function extendForSelect(obj: BaseObj, label = 'title', value = 'id') {\r\n-  return { ...obj, label: obj[label], value: obj[value] };\r\n-}\n\\ No newline at end of file\n+export function extendForSelect (obj, label = 'title', value = 'id') {\r\n+  return { ...obj, label: obj[label], value: obj[value] }\r\n+}\r\n"
+                }
+            ],
+            "date": 1659185157684,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

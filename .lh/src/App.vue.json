@@ -1,0 +1,618 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 150,
+            "patches": [
+                {
+                    "date": 1659169055206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659169361693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n       <img src=\"./assets/vue.svg\" class=\"logo vue\" alt=\"Vue logo\" />\n     </a>\n   </div>\n   <AInput :value=\"123\"/>\n+\n+  \n   <HelloWorld msg=\"Vite + Vue\" />\n </template>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659169892612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,23 @@\n-<script setup>\n-// This starter template is using Vue 3 <script setup> SFCs\n-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup\n-import HelloWorld from './components/HelloWorld.vue'\n-</script>\n \n <template>\n   <div>\n-    <a href=\"https://vitejs.dev\" target=\"_blank\">\n-      <img src=\"/vite.svg\" class=\"logo\" alt=\"Vite logo\" />\n-    </a>\n-    <a href=\"https://vuejs.org/\" target=\"_blank\">\n-      <img src=\"./assets/vue.svg\" class=\"logo vue\" alt=\"Vue logo\" />\n-    </a>\n+  \n   </div>\n   <AInput :value=\"123\"/>\n \n   \n   <HelloWorld msg=\"Vite + Vue\" />\n </template>\n \n+\n+<script setup>\n+\n+\n+</script>\n+\n+\n+\n <style scoped>\n .logo {\n   height: 6em;\n   padding: 1.5em;\n"
+                },
+                {
+                    "date": 1659170041261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n \n <template>\n-  <div>\n-  \n-  </div>\n-  <AInput :value=\"123\"/>\n-\n-  \n-  <HelloWorld msg=\"Vite + Vue\" />\n+ <a-row :gutter=\"[16,16]\">\n+  <a-col :span=\"6\"/>\n+  <a-col :span=\"6\"/>\n+  <a-col :span=\"6\"/>\n+  <a-col :span=\"6\"/>\n+</a-row>\n </template>\n \n \n <script setup>\n"
+                },
+                {
+                    "date": 1659170053715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n \n <template>\n  <a-row :gutter=\"[16,16]\">\n+  <a-col :span=\"6\"><\n   <a-col :span=\"6\"/>\n   <a-col :span=\"6\"/>\n   <a-col :span=\"6\"/>\n-  <a-col :span=\"6\"/>\n </a-row>\n </template>\n \n \n"
+                },
+                {
+                    "date": 1659170115643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,22 @@\n \n <template>\n  <a-row :gutter=\"[16,16]\">\n-  <a-col :span=\"6\"><\n-  <a-col :span=\"6\"/>\n-  <a-col :span=\"6\"/>\n-  <a-col :span=\"6\"/>\n+  <ACol :span=\"6\">\n+    <ASelect/>\n+  </ACol>\n+  <ACol :span=\"6\">\n+    <ASelect/>\n+  \n+  </ACol>\n+  <ACol :span=\"6\">\n+    <ASelect/>\n+  \n+  </ACol>\n+  <ACol :span=\"6\">\n+    <ASelect/>\n+  \n+  </ACol>\n </a-row>\n </template>\n \n \n"
+                },
+                {
+                    "date": 1659170130007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,21 @@\n <template>\n  <a-row :gutter=\"[16,16]\">\n   <ACol :span=\"6\">\n     <ASelect/>\n+    2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  \n+  2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  \n+  2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  \n+  2\n   </ACol>\n </a-row>\n </template>\n \n"
+                },
+                {
+                    "date": 1659170189886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n- <a-row :gutter=\"[16,16]\">\n+ <Arow :gutter=\"[16,16]\">\n   <ACol :span=\"6\">\n-    <ASelect/>\n+       <ASelect/>\n     2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n@@ -16,9 +16,9 @@\n   <ACol :span=\"6\">\n     <ASelect/>\n   2\n   </ACol>\n-</a-row>\n+</Arow>\n </template>\n \n \n <script setup>\n"
+                },
+                {
+                    "date": 1659171531779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,16 +19,12 @@\n   </ACol>\n </Arow>\n </template>\n \n-\n <script setup>\n \n-\n </script>\n \n-\n-\n <style scoped>\n .logo {\n   height: 6em;\n   padding: 1.5em;\n"
+                },
+                {
+                    "date": 1659172649619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \n <template>\n  <Arow :gutter=\"[16,16]\">\n-  <ACol :span=\"6\">\n+  <ACol>\n        <ASelect/>\n     2\n   </ACol>\n   <ACol :span=\"6\">\n"
+                },
+                {
+                    "date": 1659172665006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \n <template>\n- <Arow :gutter=\"[16,16]\">\n+ <ARow :gutter=\"[16,16]\">\n   <ACol>\n        <ASelect/>\n     2\n   </ACol>\n@@ -16,9 +16,9 @@\n   <ACol :span=\"6\">\n     <ASelect/>\n   2\n   </ACol>\n-</Arow>\n+</ARow>\n </template>\n \n <script setup>\n \n"
+                },
+                {
+                    "date": 1659172680979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,14 @@\n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n        <ASelect/>\n-    2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  2\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   2\n"
+                },
+                {
+                    "date": 1659172794491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n     <ASelect/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n-  2\n   </ACol>\n </ARow>\n </template>\n \n"
+                },
+                {
+                    "date": 1659172822105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,16 +20,5 @@\n \n </script>\n \n <style scoped>\n-.logo {\n-  height: 6em;\n-  padding: 1.5em;\n-  will-change: filter;\n-}\n-.logo:hover {\n-  filter: drop-shadow(0 0 2em #646cffaa);\n-}\n-.logo.vue:hover {\n-  filter: drop-shadow(0 0 2em #42b883aa);\n-}\n </style>\n"
+                },
+                {
+                    "date": 1659172849156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n </ARow>\n </template>\n \n <script setup>\n-\n+  const save\n </script>\n \n <style scoped>\n </style>\n"
+                },
+                {
+                    "date": 1659172897473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n </ARow>\n </template>\n \n <script setup>\n-  const save\n+const saveField = {\n+\n+}\n </script>\n \n <style scoped>\n </style>\n"
+                },
+                {
+                    "date": 1659172909217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n </template>\n \n <script setup>\n const saveField = {\n-\n+  field: ''\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172918051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n </template>\n \n <script setup>\n const saveField = {\n-  field: ''\n+  field: 'АА'\n+\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172931082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n <script setup>\n const saveField = {\n   field: 'АА'\n-\n+  well: \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172942054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n \n <script setup>\n const saveField = {\n   field: 'АА'\n-  well: \n+  well: '10Д',\n+  \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172958447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n <script setup>\n const saveField = {\n   field: 'АА'\n   well: '10Д',\n-  \n+  wellType: \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172973991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n <script setup>\n const saveField = {\n   field: 'АА'\n   well: '10Д',\n-  wellType: \n+  wellType: 'добывающая',\n+  \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659172995554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n const saveField = {\n   field: 'АА'\n   well: '10Д',\n   wellType: 'добывающая',\n-  \n+  WellCondition: ''\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173004276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n const saveField = {\n   field: 'АА'\n   well: '10Д',\n   wellType: 'добывающая',\n-  WellCondition: ''\n+  WellCondition: 'Наблюдательная',\n+  \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173022439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   field: 'АА'\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n-  \n+  Horizon: ''\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173034212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,10 @@\n   field: 'АА'\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n-  Horizon: ''\n+  Horizon: 'V',\n+  \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173053713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n-  \n+  QLiquid: \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173063451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n-  QLiquid: \n+  QLiquid: '11,6',\n+  \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173097617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n   QLiquid: '11,6',\n-  \n+  waterCut: ''\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173117302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n-  QLiquid: '11,6',\n-  waterCut: ''\n+  QLiquid: 11,6,\n+  waterCut: 88,6\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173127977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,15 @@\n </template>\n \n <script setup>\n const saveField = {\n-  field: 'АА'\n+  field: 'АА',\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n   QLiquid: 11,6,\n-  waterCut: 88,6\n+  waterCut: 88,6,\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173139669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n   well: '10Д',\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n-  QLiquid: 11,6,\n-  waterCut: 88,6,\n+  QLiquid: 11.6,\n+  waterCut: 88.6\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173159285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n   wellType: 'добывающая',\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n   QLiquid: 11.6,\n-  waterCut: 88.6\n+  waterCut: 88.6,\n+  oilDensity: \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173175644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n   QLiquid: 11.6,\n   waterCut: 88.6,\n-  oilDensity: \n+  oilDensity: 0.83\n+\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173199801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   Horizon: 'V',\n   QLiquid: 11.6,\n   waterCut: 88.6,\n   oilDensity: 0.83\n-\n+  oilFlowRate: \n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173212952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,11 @@\n   WellCondition: 'Наблюдательная',\n   Horizon: 'V',\n   QLiquid: 11.6,\n   waterCut: 88.6,\n-  oilDensity: 0.83\n-  oilFlowRate: \n+  oilDensity: 0.83,\n+  oilFlowRate: 0.03\n+\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173223520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,15 +20,14 @@\n const saveField = {\n   field: 'АА',\n   well: '10Д',\n   wellType: 'добывающая',\n-  WellCondition: 'Наблюдательная',\n-  Horizon: 'V',\n-  QLiquid: 11.6,\n+  wellCondition: 'Наблюдательная',\n+  horizon: 'V',\n+  qLiquid: 11.6,\n   waterCut: 88.6,\n   oilDensity: 0.83,\n   oilFlowRate: 0.03\n-\n }\n </script>\n \n <style scoped>\n"
+                },
+                {
+                    "date": 1659173259544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,19 +16,142 @@\n </ARow>\n </template>\n \n <script setup>\n-const saveField = {\n-  field: 'АА',\n-  well: '10Д',\n-  wellType: 'добывающая',\n-  wellCondition: 'Наблюдательная',\n-  horizon: 'V',\n-  qLiquid: 11.6,\n-  waterCut: 88.6,\n-  oilDensity: 0.83,\n-  oilFlowRate: 0.03\n-}\n+const saveField = [\n+  {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }, {\n+    field: 'АА',\n+    well: '10Д',\n+    wellType: 'добывающая',\n+    wellCondition: 'Наблюдательная',\n+    horizon: 'V',\n+    qLiquid: 11.6,\n+    waterCut: 88.6,\n+    oilDensity: 0.83,\n+    oilFlowRate: 0.03\n+  }\n+\n+]\n </script>\n \n <style scoped>\n </style>\n"
+                },
+                {
+                    "date": 1659173285969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n-    well: '10Д',\n+    well: '33Г',\n     wellType: 'добывающая',\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n"
+                },
+                {
+                    "date": 1659173394049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: {},\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -30,9 +30,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '33Г',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -40,9 +40,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -50,9 +50,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -60,9 +60,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -70,9 +70,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -80,9 +80,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -90,9 +90,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -100,9 +100,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -110,9 +110,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -120,9 +120,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -130,9 +130,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n@@ -140,9 +140,9 @@\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n-    wellType: 'добывающая',\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n"
+                },
+                {
+                    "date": 1659173470837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n-    wellType: {},\n+    wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: 'Наблюдательная',\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n"
+                },
+                {
+                    "date": 1659173567729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,15 @@\n </ARow>\n </template>\n \n <script setup>\n+\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -31,9 +32,9 @@\n   }, {\n     field: 'АА',\n     well: '33Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -41,9 +42,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -51,9 +52,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -61,9 +62,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -71,9 +72,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -81,9 +82,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -91,9 +92,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -101,9 +102,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -111,9 +112,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -121,9 +122,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -131,9 +132,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n@@ -141,9 +142,9 @@\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: 'Наблюдательная',\n+    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n"
+                },
+                {
+                    "date": 1659173615935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,12 @@\n </template>\n \n <script setup>\n \n+const wellType ={\n+  1: \n+}\n+\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659173643800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n <script setup>\n \n const wellType ={\n-  1: \n+  Mining: {id: 1, title 'Добывающая'}\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173672347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,11 @@\n </template>\n \n <script setup>\n \n-const wellType ={\n-  Mining: {id: 1, title 'Добывающая'}\n+const wellType = {\n+  Mining: { id: 1, title: 'Добывающая' },\n+  NoMining: { id: 2, title: 'Добывающая' }\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173684493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n <script setup>\n \n const wellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n-  NoMining: { id: 2, title: 'Добывающая' }\n+  NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173702025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,13 @@\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n+const wellCondition = {\n+  Mining: { id: 1, title: 'Добывающая' },\n+  NoMining: { id: 2, title: 'Не дбывающая' }\n+}\n+\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659173732849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,14 +17,14 @@\n </template>\n \n <script setup>\n \n-const wellType = {\n+const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n-const wellCondition = {\n+const WellCondition = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n"
+                },
+                {
+                    "date": 1659173767856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n const WellCondition = {\n-  Mining: { id: 1, title: 'Добывающая' },\n+  Mining: { id: 1, title: 'Наблюдательная' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659173801077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n const WellCondition = {\n-  Mining: { id: 1, title: 'Наблюдательная' },\n+  Observant: { id: 1, title: 'Наблюдательная' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659173814923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n }\n \n const WellCondition = {\n   Observant: { id: 1, title: 'Наблюдательная' },\n-  NoMining: { id: 2, title: 'Не дбывающая' }\n+  InWork: { id: 2, title: 'Не дбывающая' }\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173826603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n }\n \n const WellCondition = {\n   Observant: { id: 1, title: 'Наблюдательная' },\n-  InWork: { id: 2, title: 'Не дбывающая' }\n+  InWork: { id: 2, title: 'В работе' }\n+\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173837630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n \n const WellCondition = {\n   Observant: { id: 1, title: 'Наблюдательная' },\n   InWork: { id: 2, title: 'В работе' }\n+  InWork: { id: 2, title: 'В работе' }\n \n }\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659173858842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n }\n \n const WellCondition = {\n   Observant: { id: 1, title: 'Наблюдательная' },\n-  InWork: { id: 2, title: 'В работе' }\n-  InWork: { id: 2, title: 'В работе' }\n+  InWork: { id: 2, title: 'В работе' },\n+  Idle: { id: 3, title: 'В простое' }\n \n }\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659173877550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,8 @@\n const WellCondition = {\n   Observant: { id: 1, title: 'Наблюдательная' },\n   InWork: { id: 2, title: 'В работе' },\n   Idle: { id: 3, title: 'В простое' }\n-\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659173920255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   }, {\n     field: 'АА',\n     well: '33Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n+    wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n"
+                },
+                {
+                    "date": 1659178133987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n </template>\n \n <script setup>\n \n+fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app/').then(data => console.log(data))\n+\n const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n"
+                },
+                {
+                    "date": 1659178317229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n </template>\n \n <script setup>\n \n-fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app/').then(data => console.log(data))\n+fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app').then(data => console.log(data))\n \n const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n"
+                },
+                {
+                    "date": 1659180043192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n </ARow>\n </template>\n \n <script setup>\n+import { getDatabase } from 'firebase/database'\n \n fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app').then(data => console.log(data))\n \n const WellType = {\n"
+                },
+                {
+                    "date": 1659180081955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n </ARow>\n </template>\n \n <script setup>\n+import firebase from 'firebase/app'\n import { getDatabase } from 'firebase/database'\n \n fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app').then(data => console.log(data))\n \n"
+                },
+                {
+                    "date": 1659180098437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n <script setup>\n import firebase from 'firebase/app'\n import { getDatabase } from 'firebase/database'\n \n-fetch('https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app').then(data => console.log(data))\n+const dataBase = firebase.getDatabase\n \n const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n"
+                },
+                {
+                    "date": 1659180109716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n import { getDatabase } from 'firebase/database'\n \n const dataBase = firebase.getDatabase\n \n+console.log()\n+\n const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n   NoMining: { id: 2, title: 'Не дбывающая' }\n }\n"
+                },
+                {
+                    "date": 1659180176466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,12 @@\n <script setup>\n import firebase from 'firebase/app'\n import { getDatabase } from 'firebase/database'\n \n-const dataBase = firebase.getDatabase\n+const dataBase = firebase.database().ref('data')\n \n+console.log(dataBase)\n+\n console.log()\n \n const WellType = {\n   Mining: { id: 1, title: 'Добывающая' },\n"
+                },
+                {
+                    "date": 1659180183946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n import { getDatabase } from 'firebase/database'\n \n const dataBase = firebase.database().ref('data')\n \n-console.log(dataBase)\n+console.log('dataBase', dataBase)\n \n console.log()\n \n const WellType = {\n"
+                },
+                {
+                    "date": 1659180351314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,8 @@\n </ARow>\n </template>\n \n <script setup>\n-import firebase from 'firebase/app'\n-import { getDatabase } from 'firebase/database'\n \n const dataBase = firebase.database().ref('data')\n \n console.log('dataBase', dataBase)\n"
+                },
+                {
+                    "date": 1659180366852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n </template>\n \n <script setup>\n \n-const dataBase = firebase.database().ref('data')\n+// const dataBase = firebase.database().ref('data')\n \n console.log('dataBase', dataBase)\n \n console.log()\n"
+                },
+                {
+                    "date": 1659181300792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n <script setup>\n \n // const dataBase = firebase.database().ref('data')\n \n-console.log('dataBase', dataBase)\n+// console.log('dataBase', dataBase)\n \n console.log()\n \n const WellType = {\n"
+                },
+                {
+                    "date": 1659181727376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,17 @@\n   InWork: { id: 2, title: 'В работе' },\n   Idle: { id: 3, title: 'В простое' }\n }\n \n+const Horizon = {\n+  One: { id: 1, title: 'I' },\n+  Two: { id: 2, title: 'II' },\n+  Tree: { id: 3, title: 'III' },\n+  F: { id: 1, title: 'I' },\n+  One: { id: 1, title: 'I' },\n+  One: { id: 1, title: 'I' }\n+}\n+\n const saveField = [\n   {\n     field: 'АА',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659181778548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,12 +37,12 @@\n \n const Horizon = {\n   One: { id: 1, title: 'I' },\n   Two: { id: 2, title: 'II' },\n-  Tree: { id: 3, title: 'III' },\n-  F: { id: 1, title: 'I' },\n-  One: { id: 1, title: 'I' },\n-  One: { id: 1, title: 'I' }\n+  Three: { id: 3, title: 'III' },\n+  Four: { id: 1, title: 'I' },\n+  Five: { id: 1, title: 'I' },\n+  Six: { id: 1, title: 'I' }\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659181808951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,11 +38,11 @@\n const Horizon = {\n   One: { id: 1, title: 'I' },\n   Two: { id: 2, title: 'II' },\n   Three: { id: 3, title: 'III' },\n-  Four: { id: 1, title: 'I' },\n-  Five: { id: 1, title: 'I' },\n-  Six: { id: 1, title: 'I' }\n+  Four: { id: 4, title: 'IV' },\n+  Five: { id: 5, title: 'V' },\n+  Six: { id: 6, title: 'VI' }\n }\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659181840419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n+    horizon: { id: 5, title: 'V' },\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n"
+                },
+                {
+                    "date": 1659181860373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     field: 'АА',\n     well: '33Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n-    horizon: 'V',\n+    horizon: { id: 1, title: 'I' },\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n"
+                },
+                {
+                    "date": 1659181871420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     well: '33Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { id: 1, title: 'I' },\n-    qLiquid: 11.6,\n+    qLiquid: 1.8,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659181893908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,10 +61,10 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { id: 1, title: 'I' },\n     qLiquid: 1.8,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n+    waterCut: 98,\n+    oilDensity: 0.82,\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659181899900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     horizon: { id: 1, title: 'I' },\n     qLiquid: 1.8,\n     waterCut: 98,\n     oilDensity: 0.82,\n-    oilFlowRate: 0.03\n+    oilFlowRate: 0\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n"
+                },
+                {
+                    "date": 1659181954683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,22 +63,22 @@\n     horizon: { id: 1, title: 'I' },\n     qLiquid: 1.8,\n     waterCut: 98,\n     oilDensity: 0.82,\n-    oilFlowRate: 0\n+    oilFlowRate: 0.00\n   }, {\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n+    wellCondition: { id: 2, title: 'В работе' },\n     horizon: 'V',\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n     field: 'АА',\n-    well: '10Д',\n+    well: '37Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n     qLiquid: 11.6,\n"
+                },
+                {
+                    "date": 1659181973051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     field: 'АА',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { id: 2, title: 'В работе' },\n-    horizon: 'V',\n+    horizon: { id: 2, title: 'II' },\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n"
+                },
+                {
+                    "date": 1659181997059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,12 +70,12 @@\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { id: 2, title: 'В работе' },\n     horizon: { id: 2, title: 'II' },\n-    qLiquid: 11.6,\n-    waterCut: 88.6,\n+    qLiquid: 12.46,\n+    waterCut: 83,\n     oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    oilFlowRate: 0.04\n   }, {\n     field: 'АА',\n     well: '37Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n"
+                },
+                {
+                    "date": 1659182075262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,10 @@\n }\n \n const saveField = [\n   {\n-    field: 'АА',\n+    id: 1,\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: { id: 5, title: 'V' },\n@@ -55,9 +56,10 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    id: 2,\n+    field: 'AA',\n     well: '33Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { id: 1, title: 'I' },\n@@ -65,9 +67,9 @@\n     waterCut: 98,\n     oilDensity: 0.82,\n     oilFlowRate: 0.00\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { id: 2, title: 'В работе' },\n     horizon: { id: 2, title: 'II' },\n@@ -75,9 +77,9 @@\n     waterCut: 83,\n     oilDensity: 0.83,\n     oilFlowRate: 0.04\n   }, {\n-    field: 'АА',\n+    field: 'СС',\n     well: '37Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -85,9 +87,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -95,9 +97,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -105,9 +107,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -115,9 +117,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -125,9 +127,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -135,9 +137,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -145,9 +147,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -155,9 +157,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n@@ -165,9 +167,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n-    field: 'АА',\n+    field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'V',\n"
+                },
+                {
+                    "date": 1659182081631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,9 @@\n     waterCut: 98,\n     oilDensity: 0.82,\n     oilFlowRate: 0.00\n   }, {\n+    id: 3,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { id: 2, title: 'В работе' },\n"
+                },
+                {
+                    "date": 1659182091460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,8 +78,9 @@\n     waterCut: 83,\n     oilDensity: 0.83,\n     oilFlowRate: 0.04\n   }, {\n+    id: 4,\n     field: 'СС',\n     well: '37Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n@@ -88,8 +89,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 5,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182097067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,8 +100,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 6,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182107118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,8 +111,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 7,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n@@ -121,8 +122,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 8,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182116841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,8 +133,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 9,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n@@ -143,8 +144,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 10,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182125333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -155,8 +155,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 11,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n@@ -165,8 +166,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 12,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182183498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,13 +90,13 @@\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n     id: 5,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'CC',\n+    well: '47',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n+    horizon: { typeId: 6, title: 'IV' },\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n@@ -177,8 +177,9 @@\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n+    id: 13,\n     field: 'AA',\n     well: '10Д',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n"
+                },
+                {
+                    "date": 1659182216223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,12 +95,12 @@\n     well: '47',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: { typeId: 6, title: 'IV' },\n-    qLiquid: 11.6,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    qLiquid: 20.11,\n+    waterCut: 91.64,\n+    oilDensity: 0.82,\n+    oilFlowRate: 0.02\n   }, {\n     id: 6,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182282701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,13 +102,13 @@\n     oilFlowRate: 0.02\n   }, {\n     id: 6,\n     field: 'AA',\n-    well: '10Д',\n+    well: '14',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    wellCondition: { typeId: 2, title: 'В работе' },\n+    horizon: { typeId: 2, title: 'II' },\n+    qLiquid: 20.33,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182297848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,11 +107,11 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 2, title: 'II' },\n     qLiquid: 20.33,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    waterCut: 50,\n+    oilDensity: 0.82,\n+    oilFlowRate: 0.21\n   }, {\n     id: 7,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182339483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,13 +113,13 @@\n     oilFlowRate: 0.21\n   }, {\n     id: 7,\n     field: 'AA',\n-    well: '10Д',\n+    well: '26',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    horizon: { typeId: 2, title: 'II' },\n+    qLiquid: 9.76,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182352508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,11 +118,11 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: { typeId: 2, title: 'II' },\n     qLiquid: 9.76,\n-    waterCut: 88.6,\n+    waterCut: 90.86,\n     oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    oilFlowRate: 0.02\n   }, {\n     id: 8,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182398780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,13 +123,13 @@\n     oilDensity: 0.83,\n     oilFlowRate: 0.02\n   }, {\n     id: 8,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'BB',\n+    well: '27',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n+    wellCondition: { typeId: 3, title: 'В простое' },\n+    horizon: { typeId: 3, title: 'III' },\n     qLiquid: 11.6,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n"
+                },
+                {
+                    "date": 1659182422999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,10 +128,10 @@\n     well: '27',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 3, title: 'В простое' },\n     horizon: { typeId: 3, title: 'III' },\n-    qLiquid: 11.6,\n-    waterCut: 88.6,\n+    qLiquid: null,\n+    waterCut: 39.92,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n     id: 9,\n"
+                },
+                {
+                    "date": 1659182432114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n     horizon: { typeId: 3, title: 'III' },\n     qLiquid: null,\n     waterCut: 39.92,\n     oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    oilFlowRate: 0.00\n   }, {\n     id: 9,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182478078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,13 +135,13 @@\n     oilFlowRate: 0.00\n   }, {\n     id: 9,\n     field: 'AA',\n-    well: '10Д',\n+    well: '28Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    wellCondition: { typeId: 3, title: 'В простое' },\n+    horizon: { typeId: 4, title: 'IV' },\n+    qLiquid: 7.82,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182492182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,11 +140,11 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 3, title: 'В простое' },\n     horizon: { typeId: 4, title: 'IV' },\n     qLiquid: 7.82,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    waterCut: null,\n+    oilDensity: 0.82,\n+    oilFlowRate: 0.09\n   }, {\n     id: 10,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182523060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -145,14 +145,14 @@\n     oilDensity: 0.82,\n     oilFlowRate: 0.09\n   }, {\n     id: 10,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'BB',\n+    well: '29Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    horizon: 'II',\n+    qLiquid: 6.17,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182536719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,11 +151,11 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n     horizon: 'II',\n     qLiquid: 6.17,\n-    waterCut: 88.6,\n+    waterCut: 99.9,\n     oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    oilFlowRate: 0.00\n   }, {\n     id: 11,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182627594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -149,21 +149,21 @@\n     field: 'BB',\n     well: '29Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'II',\n+    horizon: { typeId: 3, title: 'III' },\n     qLiquid: 6.17,\n     waterCut: 99.9,\n     oilDensity: 0.83,\n     oilFlowRate: 0.00\n   }, {\n     id: 11,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'BB',\n+    well: '32Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    wellCondition: { typeId: 2, title: 'В работе' },\n+    horizon: { typeId: 5, title: 'V' },\n+    qLiquid: 6.84,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182637335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,10 +162,10 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 5, title: 'V' },\n     qLiquid: 6.84,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n+    waterCut: 99.9,\n+    oilDensity: 0.82,\n     oilFlowRate: 0.03\n   }, {\n     id: 12,\n     field: 'AA',\n"
+                },
+                {
+                    "date": 1659182737773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,20 +161,20 @@\n     well: '32Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 5, title: 'V' },\n-    qLiquid: 6.84,\n+    qLiquid: 6.17,\n     waterCut: 99.9,\n     oilDensity: 0.82,\n     oilFlowRate: 0.03\n   }, {\n     id: 12,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'CC',\n+    well: '32Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    wellCondition: { typeId: 2, title: 'В работе' },\n+    horizon: { typeId: 3, title: 'III' },\n+    qLiquid: 6.84,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182751630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,11 +173,11 @@\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 3, title: 'III' },\n     qLiquid: 6.84,\n-    waterCut: 88.6,\n-    oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    waterCut: 99.99,\n+    oilDensity: 0.82,\n+    oilFlowRate: 0.00\n   }, {\n     id: 13,\n     field: 'AA',\n     well: '10Д',\n"
+                },
+                {
+                    "date": 1659182771117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,9 @@\n     well: '32Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 5, title: 'V' },\n-    qLiquid: 6.17,\n+    qLiquid: 6.84,\n     waterCut: 99.9,\n     oilDensity: 0.82,\n     oilFlowRate: 0.03\n   }, {\n"
+                },
+                {
+                    "date": 1659182778611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 3, title: 'III' },\n     qLiquid: 6.84,\n     waterCut: 99.99,\n-    oilDensity: 0.82,\n+    oilDensity: 0.83,\n     oilFlowRate: 0.00\n   }, {\n     id: 13,\n     field: 'AA',\n"
+                },
+                {
+                    "date": 1659182860713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -178,14 +178,14 @@\n     oilDensity: 0.83,\n     oilFlowRate: 0.00\n   }, {\n     id: 13,\n-    field: 'AA',\n-    well: '10Д',\n+    field: 'СС',\n+    well: '35Г',\n     wellType: { typeId: 1, title: 'Добывающая' },\n-    wellCondition: { typeId: 1, title: 'Наблюдательная' },\n-    horizon: 'V',\n-    qLiquid: 11.6,\n+    wellCondition: { typeId: 2, title: 'В работе' },\n+    horizon: { typeId: 5, title: 'V' },\n+    qLiquid: 16.17,\n     waterCut: 88.6,\n     oilDensity: 0.83,\n     oilFlowRate: 0.03\n   }\n"
+                },
+                {
+                    "date": 1659182872041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,10 +185,10 @@\n     wellCondition: { typeId: 2, title: 'В работе' },\n     horizon: { typeId: 5, title: 'V' },\n     qLiquid: 16.17,\n     waterCut: 88.6,\n-    oilDensity: 0.83,\n-    oilFlowRate: 0.03\n+    oilDensity: 0.82,\n+    oilFlowRate: 0.41\n   }\n \n ]\n </script>\n"
+                },
+                {
+                    "date": 1659182907537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n+\n+  <ATable :data-source=\"saveField\"/>\n </ARow>\n </template>\n \n <script setup>\n"
+                },
+                {
+                    "date": 1659182926708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,14 @@\n   Five: { id: 5, title: 'V' },\n   Six: { id: 6, title: 'VI' }\n }\n \n+const columns = [\n+  {\n+\n+  }\n+]\n+\n const saveField = [\n   {\n     id: 1,\n     field: 'AA',\n"
+                },
+                {
+                    "date": 1659182952639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,11 @@\n }\n \n const columns = [\n   {\n-\n+    title: t('common.document'),\n+    dataIndex: 'title',\n+    width: 300\n   }\n ]\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659182976013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n \n-  <ATable :data-source=\"saveField\"/>\n+  <ATable :columns=\"columns\" :data-source=\"saveField\"/>\n </ARow>\n </template>\n \n <script setup>\n@@ -47,10 +47,10 @@\n }\n \n const columns = [\n   {\n-    title: t('common.document'),\n-    dataIndex: 'title',\n+    title: 'id',\n+    dataIndex: 'id',\n     width: 300\n   }\n ]\n \n"
+                },
+                {
+                    "date": 1659182997132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,11 @@\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n \n+</ARow>\n   <ATable :columns=\"columns\" :data-source=\"saveField\"/>\n-</ARow>\n+\n </template>\n \n <script setup>\n \n"
+                },
+                {
+                    "date": 1659183146110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,28 @@\n   {\n     title: 'id',\n     dataIndex: 'id',\n     width: 300\n+  },\n+  {\n+    title: '№',\n+    dataIndex: 'field',\n+    width: 300\n+  },\n+  {\n+    title: 'id',\n+    dataIndex: 'well',\n+    width: 300\n+  },\n+  {\n+    title: 'id',\n+    dataIndex: 'id',\n+    width: 300\n+  },\n+  {\n+    title: 'id',\n+    dataIndex: 'id',\n+    width: 300\n   }\n ]\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659183164307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n }\n \n const columns = [\n   {\n-    title: 'id',\n+    title: '№',\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n"
+                },
+                {
+                    "date": 1659183169822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n-    title: '№',\n+    title: 'Месторождение',\n     dataIndex: 'field',\n     width: 300\n   },\n   {\n"
+                },
+                {
+                    "date": 1659183176361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n     dataIndex: 'field',\n     width: 300\n   },\n   {\n-    title: 'id',\n+    title: 'Скважина',\n     dataIndex: 'well',\n     width: 300\n   },\n   {\n"
+                },
+                {
+                    "date": 1659183185367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,14 +58,14 @@\n     dataIndex: 'field',\n     width: 300\n   },\n   {\n-    title: 'Скважина',\n+    title: 'Тип скважины',\n     dataIndex: 'well',\n     width: 300\n   },\n   {\n-    title: 'id',\n+    title: 'Состояние скважины',\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n"
+                },
+                {
+                    "date": 1659183198977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,11 +68,26 @@\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n-    title: 'id',\n+    title: 'Горизонт',\n     dataIndex: 'id',\n     width: 300\n+  },\n+  {\n+    title: 'Горизонт',\n+    dataIndex: 'id',\n+    width: 300\n+  },\n+  {\n+    title: 'Горизонт',\n+    dataIndex: 'id',\n+    width: 300\n+  },\n+  {\n+    title: 'Горизонт',\n+    dataIndex: 'id',\n+    width: 300\n   }\n ]\n \n const saveField = [\n"
+                },
+                {
+                    "date": 1659183208545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n-    title: 'Горизонт',\n+    title: 'Q жидкости',\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n"
+                },
+                {
+                    "date": 1659183219837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,17 +78,18 @@\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n-    title: 'Горизонт',\n+    title: 'Обводненность',\n     dataIndex: 'id',\n     width: 300\n   },\n   {\n-    title: 'Горизонт',\n+    title: 'Плотность нефти',\n     dataIndex: 'id',\n     width: 300\n   }\n+\n ]\n \n const saveField = [\n   {\n"
+                },
+                {
+                    "date": 1659183227990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,8 +86,13 @@\n   {\n     title: 'Плотность нефти',\n     dataIndex: 'id',\n     width: 300\n+  },\n+  {\n+    title: 'Плотность нефти',\n+    dataIndex: 'id',\n+    width: 300\n   }\n \n ]\n \n"
+                },
+                {
+                    "date": 1659183254327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,50 +49,41 @@\n \n const columns = [\n   {\n     title: '№',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n     title: 'Месторождение',\n-    dataIndex: 'field',\n-    width: 300\n+    dataIndex: 'field'\n   },\n   {\n     title: 'Тип скважины',\n-    dataIndex: 'well',\n-    width: 300\n+    dataIndex: 'well'\n   },\n   {\n     title: 'Состояние скважины',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n     title: 'Горизонт',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n     title: 'Q жидкости',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n     title: 'Обводненность',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n     title: 'Плотность нефти',\n-    dataIndex: 'id',\n-    width: 300\n+    dataIndex: 'id'\n   },\n   {\n-    title: 'Плотность нефти',\n-    dataIndex: 'id',\n-    width: 300\n+    title: 'Дебит нефти',\n+    dataIndex: 'id'\n   }\n \n ]\n \n"
+                },
+                {
+                    "date": 1659183304325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n     dataIndex: 'well'\n   },\n   {\n     title: 'Состояние скважины',\n-    dataIndex: 'id'\n+    dataIndex: ['wellType', 'title']\n   },\n   {\n     title: 'Горизонт',\n     dataIndex: 'id'\n"
+                },
+                {
+                    "date": 1659183327354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     dataIndex: ['wellType', 'title']\n   },\n   {\n     title: 'Горизонт',\n-    dataIndex: 'id'\n+    dataIndex: ['wellCondition', 'title']\n   },\n   {\n     title: 'Q жидкости',\n     dataIndex: 'id'\n"
+                },
+                {
+                    "date": 1659183391865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,21 +69,21 @@\n     dataIndex: ['wellCondition', 'title']\n   },\n   {\n     title: 'Q жидкости',\n-    dataIndex: 'id'\n+    dataIndex: ['horizon', 'title']\n   },\n   {\n     title: 'Обводненность',\n-    dataIndex: 'id'\n+    dataIndex: 'qLiquid'\n   },\n   {\n     title: 'Плотность нефти',\n-    dataIndex: 'id'\n+    dataIndex: 'waterCut'\n   },\n   {\n     title: 'Дебит нефти',\n-    dataIndex: 'id'\n+    dataIndex: 'oilDensity'\n   }\n \n ]\n \n"
+                },
+                {
+                    "date": 1659183558384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     title: 'Месторождение',\n     dataIndex: 'field'\n   },\n   {\n-    title: 'Тип скважины',\n+    title: 'Скважина',\n     dataIndex: 'well'\n   },\n   {\n     title: 'Состояние скважины',\n"
+                },
+                {
+                    "date": 1659183573598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     title: 'Скважина',\n     dataIndex: 'well'\n   },\n   {\n-    title: 'Состояние скважины',\n+    title: 'Тип скважины',\n     dataIndex: ['wellType', 'title']\n   },\n   {\n     title: 'Горизонт',\n"
+                },
+                {
+                    "date": 1659183583648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n     title: 'Тип скважины',\n     dataIndex: ['wellType', 'title']\n   },\n   {\n-    title: 'Горизонт',\n+    title: 'Состояние скважины',\n     dataIndex: ['wellCondition', 'title']\n   },\n   {\n     title: 'Q жидкости',\n"
+                },
+                {
+                    "date": 1659183590855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n     title: 'Состояние скважины',\n     dataIndex: ['wellCondition', 'title']\n   },\n   {\n-    title: 'Q жидкости',\n+    title: 'Горизонт',\n     dataIndex: ['horizon', 'title']\n   },\n   {\n     title: 'Обводненность',\n"
+                },
+                {
+                    "date": 1659183599585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n     title: 'Горизонт',\n     dataIndex: ['horizon', 'title']\n   },\n   {\n-    title: 'Обводненность',\n+    title: 'Q жидкости',\n     dataIndex: 'qLiquid'\n   },\n   {\n     title: 'Плотность нефти',\n"
+                },
+                {
+                    "date": 1659183608113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n     title: 'Q жидкости',\n     dataIndex: 'qLiquid'\n   },\n   {\n-    title: 'Плотность нефти',\n+    title: 'Обводненность',\n     dataIndex: 'waterCut'\n   },\n   {\n     title: 'Дебит нефти',\n"
+                },
+                {
+                    "date": 1659183629279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,10 +80,14 @@\n     title: 'Обводненность',\n     dataIndex: 'waterCut'\n   },\n   {\n-    title: 'Дебит нефти',\n+    title: 'Плотность нефти',\n     dataIndex: 'oilDensity'\n+  },\n+  {\n+    title: 'Плотность нефти',\n+    dataIndex: 'oilDensity'\n   }\n \n ]\n \n"
+                },
+                {
+                    "date": 1659183636111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     title: 'Плотность нефти',\n     dataIndex: 'oilDensity'\n   },\n   {\n-    title: 'Плотность нефти',\n+    title: 'Дебит нефти',\n     dataIndex: 'oilDensity'\n   }\n \n ]\n"
+                },
+                {
+                    "date": 1659183759823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect/>\n+       <ASelect :options=\"\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659183795036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect :options=\"\"/>\n+       <ASelect :options=\"objectValues(WellType).map(opt => ({ ...opt, title: t(opt.title) })),\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659183907617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect :options=\"objectValues(WellType).map(opt => ({ ...opt, title: t(opt.title) })),\"/>\n+       <ASelect :options=\"[{value: 1, label: 'we'}}]\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659183933711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect :options=\"[{value: 1, label: 'we'}}]\"/>\n+       <ASelect :options=\"[        value: 'jack',\n+        label: 'Jack',}]\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659183943079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect :options=\"[        value: 'jack',\n-        label: 'Jack',}]\"/>\n+       <ASelect :options=\"[        {value: 'jack',\n+        label: 'Jack'}]\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659184153471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-       <ASelect :options=\"[        {value: 'jack',\n-        label: 'Jack'}]\"/>\n+\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659184487913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,30 +24,8 @@\n // const dataBase = firebase.database().ref('data')\n \n // console.log('dataBase', dataBase)\n \n-console.log()\n-\n-const WellType = {\n-  Mining: { id: 1, title: 'Добывающая' },\n-  NoMining: { id: 2, title: 'Не дбывающая' }\n-}\n-\n-const WellCondition = {\n-  Observant: { id: 1, title: 'Наблюдательная' },\n-  InWork: { id: 2, title: 'В работе' },\n-  Idle: { id: 3, title: 'В простое' }\n-}\n-\n-const Horizon = {\n-  One: { id: 1, title: 'I' },\n-  Two: { id: 2, title: 'II' },\n-  Three: { id: 3, title: 'III' },\n-  Four: { id: 4, title: 'IV' },\n-  Five: { id: 5, title: 'V' },\n-  Six: { id: 6, title: 'VI' }\n-}\n-\n const columns = [\n   {\n     title: '№',\n     dataIndex: 'id'\n"
+                },
+                {
+                    "date": 1659184883841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-\n+<SelectAvailability/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n@@ -19,9 +19,9 @@\n \n </template>\n \n <script setup>\n-\n+import SelectAvailability from './components/Select/SelectAvailability.vue'\n // const dataBase = firebase.database().ref('data')\n \n // console.log('dataBase', dataBase)\n \n"
+                },
+                {
+                    "date": 1659185517438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n-  <ACol>\n-<SelectAvailability/>\n+  <ACol  :span=\"6\">\n+      <SelectAvailability/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659185525377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n-  <ACol  :span=\"6\">\n+  <ACol>\n       <SelectAvailability/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n"
+                },
+                {
+                    "date": 1659185555853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-      <SelectAvailability/>\n+  <AFormItem label=\"Статус\">\n+    <SelectAvailability/>\n+\n+  </AFormItem>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659185659658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-  <AFormItem label=\"Статус\">\n     <SelectAvailability/>\n-\n-  </AFormItem>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659185806025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-    <SelectAvailability/>\n+    <SelectAvailability :span=\"6\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659189408115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,9 @@\n </template>\n \n <script setup>\n import SelectAvailability from './components/Select/SelectAvailability.vue'\n-// const dataBase = firebase.database().ref('data')\n \n-// console.log('dataBase', dataBase)\n-\n const columns = [\n   {\n     title: '№',\n     dataIndex: 'id'\n"
+                },
+                {
+                    "date": 1659189429552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n-    <SelectAvailability :span=\"6\"/>\n+    <SelectAvailability :span=\"6\" size=\"large\"/>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659189472579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n \n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n+  <AFormItem>\n     <SelectAvailability :span=\"6\" size=\"large\"/>\n+\n+  </AFormItem>\n   </ACol>\n   <ACol :span=\"6\">\n     <ASelect/>\n   </ACol>\n"
+                },
+                {
+                    "date": 1659189483440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n <template>\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n   <AFormItem>\n-    <SelectAvailability :span=\"6\" size=\"large\"/>\n+    <SelectAvailability size=\"large\"/>\n \n   </AFormItem>\n   </ACol>\n   <ACol :span=\"6\">\n"
+                },
+                {
+                    "date": 1659189662876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n \n <template>\n+<ACard>\n+\n  <ARow :gutter=\"[16,16]\">\n   <ACol>\n   <AFormItem>\n     <SelectAvailability size=\"large\"/>\n@@ -18,8 +20,9 @@\n   </ACol>\n \n </ARow>\n   <ATable :columns=\"columns\" :data-source=\"saveField\"/>\n+</ACard>\n \n </template>\n \n <script setup>\n"
+                },
+                {
+                    "date": 1659189950068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     <ASelect/>\n   </ACol>\n \n </ARow>\n-  <ATable :columns=\"columns\" :data-source=\"saveField\"/>\n+  <ATable :columns=\"columns\" :data-source=\"saveField\" :scroll=\"{ x: $isMobile ? 1024 : true}\"/>\n </ACard>\n \n </template>\n \n"
+                }
+            ],
+            "date": 1659169055206,
+            "name": "Commit-0",
+            "content": "<script setup>\n// This starter template is using Vue 3 <script setup> SFCs\n// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup\nimport HelloWorld from './components/HelloWorld.vue'\n</script>\n\n<template>\n  <div>\n    <a href=\"https://vitejs.dev\" target=\"_blank\">\n      <img src=\"/vite.svg\" class=\"logo\" alt=\"Vite logo\" />\n    </a>\n    <a href=\"https://vuejs.org/\" target=\"_blank\">\n      <img src=\"./assets/vue.svg\" class=\"logo vue\" alt=\"Vue logo\" />\n    </a>\n  </div>\n  <AInput :value=\"123\"/>\n  <HelloWorld msg=\"Vite + Vue\" />\n</template>\n\n<style scoped>\n.logo {\n  height: 6em;\n  padding: 1.5em;\n  will-change: filter;\n}\n.logo:hover {\n  filter: drop-shadow(0 0 2em #646cffaa);\n}\n.logo.vue:hover {\n  filter: drop-shadow(0 0 2em #42b883aa);\n}\n</style>\n"
+        }
+    ]
+}

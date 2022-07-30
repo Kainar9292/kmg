@@ -1,0 +1,154 @@
+{
+    "sourceFile": "src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1659169243164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659169251878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n import './style.css'\n import Antd from 'ant-design-vue/es';\n import App from './App.vue'\n \n+app.use(DatePicker);\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1659169275611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,8 @@\n import './style.css'\n import Antd from 'ant-design-vue/es';\n import App from './App.vue'\n \n+\n+\n app.use(DatePicker);\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1659169296170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n import './style.css'\n import Antd from 'ant-design-vue/es';\n import App from './App.vue'\n \n+const app = createApp(App);\n \n-\n app.use(DatePicker);\n-createApp(App).mount('#app')\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1659169345691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n import App from './App.vue'\n \n const app = createApp(App);\n \n-app.use(DatePicker);\n+app.use(Antd);\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659169583973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { createApp } from 'vue'\n import './style.css'\n+import 'ant-design-vue/lib/date-picker/style/css';\n import Antd from 'ant-design-vue/es';\n import App from './App.vue'\n \n const app = createApp(App);\n"
+                },
+                {
+                    "date": 1659169676506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createApp } from 'vue'\n import './style.css'\n-import 'ant-design-vue/lib/date-picker/style/css';\n+import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es';\n import App from './App.vue'\n \n const app = createApp(App);\n"
+                },
+                {
+                    "date": 1659178966942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { createApp } from 'vue'\n import './style.css'\n import 'ant-design-vue/dist/antd.css'\n-import Antd from 'ant-design-vue/es';\n+import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-const app = createApp(App);\n+const app = createApp(App)\n \n-app.use(Antd);\n+app.use(Antd)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659179054548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,26 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n+import { initializeApp } from 'firebase/app'\n+// TODO: Add SDKs for Firebase products that you want to use\n+// https://firebase.google.com/docs/web/setup#available-libraries\n+\n+// Your web app's Firebase configuration\n+const firebaseConfig = {\n+  apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n+  authDomain: 'kmg-back.firebaseapp.com',\n+  databaseURL: 'https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app',\n+  projectId: 'kmg-back',\n+  storageBucket: 'kmg-back.appspot.com',\n+  messagingSenderId: '528288816571',\n+  appId: '1:528288816571:web:3159b735e39b27cb59f89e'\n+}\n+\n+// Initialize Firebase\n+initializeApp(firebaseConfig)\n+\n const app = createApp(App)\n \n app.use(Antd)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659179074582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,11 @@\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n import { initializeApp } from 'firebase/app'\n-// TODO: Add SDKs for Firebase products that you want to use\n-// https://firebase.google.com/docs/web/setup#available-libraries\n+import dataBase\n \n-// Your web app's Firebase configuration\n+\n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n   databaseURL: 'https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app',\n"
+                },
+                {
+                    "date": 1659179102935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,10 @@\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n import { initializeApp } from 'firebase/app'\n-import dataBase\n+import { getDatabase } from 'firebase/database'\n \n-\n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n   databaseURL: 'https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app',\n"
+                },
+                {
+                    "date": 1659180033912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n import { initializeApp } from 'firebase/app'\n-import { getDatabase } from 'firebase/database'\n+import from 'firebase/database'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n"
+                },
+                {
+                    "date": 1659180278434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n import { initializeApp } from 'firebase/app'\n-import from 'firebase/database'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n"
+                },
+                {
+                    "date": 1659180323161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   appId: '1:528288816571:web:3159b735e39b27cb59f89e'\n }\n \n // Initialize Firebase\n-initializeApp(firebaseConfig)\n+const appFirebase = initializeApp(firebaseConfig)\n \n const app = createApp(App)\n \n app.use(Antd)\n"
+                },
+                {
+                    "date": 1659180331235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,6 @@\n \n const app = createApp(App)\n \n app.use(Antd)\n+app.use(appFirebase)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659180484169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-import { initializeApp } from 'firebase/app'\n+import { initializeApp, getDatabase } from 'firebase/app'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n"
+                },
+                {
+                    "date": 1659180509800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n \n // Initialize Firebase\n const appFirebase = initializeApp(firebaseConfig)\n \n+const db = getDatabase\n+\n const app = createApp(App)\n \n app.use(Antd)\n app.use(appFirebase)\n"
+                },
+                {
+                    "date": 1659180516814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n // Initialize Firebase\n const appFirebase = initializeApp(firebaseConfig)\n \n-const db = getDatabase\n+const db = getDatabase(appFirebase)\n \n const app = createApp(App)\n \n app.use(Antd)\n"
+                },
+                {
+                    "date": 1659180559377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n const appFirebase = initializeApp(firebaseConfig)\n \n const db = getDatabase(appFirebase)\n \n+const cityCol = collection(db, 'cities')\n+\n const app = createApp(App)\n \n app.use(Antd)\n app.use(appFirebase)\n"
+                },
+                {
+                    "date": 1659180594473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-import { initializeApp, getDatabase } from 'firebase/app'\n+import { initializeApp, collection, getDatabase } from 'firebase/app'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n@@ -20,10 +20,12 @@\n const appFirebase = initializeApp(firebaseConfig)\n \n const db = getDatabase(appFirebase)\n \n-const cityCol = collection(db, 'cities')\n+const cityCol = collection(db, 'data')\n \n+console.log('col col', cityCol)\n+\n const app = createApp(App)\n \n app.use(Antd)\n app.use(appFirebase)\n"
+                },
+                {
+                    "date": 1659180692419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,12 @@\n const appFirebase = initializeApp(firebaseConfig)\n \n const db = getDatabase(appFirebase)\n \n+async fnGet() {\n+  const data = await appFirebase.database().ref('data') \n+}\n+\n const cityCol = collection(db, 'data')\n \n console.log('col col', cityCol)\n \n"
+                },
+                {
+                    "date": 1659180703646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,16 +20,13 @@\n const appFirebase = initializeApp(firebaseConfig)\n \n const db = getDatabase(appFirebase)\n \n-async fnGet() {\n-  const data = await appFirebase.database().ref('data') \n+async function fnGet () {\n+  const data = await appFirebase.database().ref('data')\n }\n+console.log('col col', fnGet)\n \n-const cityCol = collection(db, 'data')\n-\n-console.log('col col', cityCol)\n-\n const app = createApp(App)\n \n app.use(Antd)\n app.use(appFirebase)\n"
+                },
+                {
+                    "date": 1659180721121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n \n async function fnGet () {\n   const data = await appFirebase.database().ref('data')\n }\n-console.log('col col', fnGet)\n \n+fnGet()\n+console.log('col col', data)\n+\n const app = createApp(App)\n \n app.use(Antd)\n app.use(appFirebase)\n"
+                },
+                {
+                    "date": 1659180733750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \n const db = getDatabase(appFirebase)\n \n async function fnGet () {\n-  const data = await appFirebase.database().ref('data')\n+  return await appFirebase.database().ref('data')\n }\n \n fnGet()\n console.log('col col', data)\n"
+                },
+                {
+                    "date": 1659180755009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-import { initializeApp, collection, getDatabase } from 'firebase/app'\n+import { initializeApp, getDatabase } from 'firebase/app'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n@@ -25,9 +25,9 @@\n   return await appFirebase.database().ref('data')\n }\n \n fnGet()\n-console.log('col col', data)\n+console.log('col col', fnGet())\n \n const app = createApp(App)\n \n app.use(Antd)\n"
+                },
+                {
+                    "date": 1659180775048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-import { initializeApp, getDatabase } from 'firebase/app'\n+import { initializeApp } from 'firebase/app'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n@@ -18,9 +18,9 @@\n \n // Initialize Firebase\n const appFirebase = initializeApp(firebaseConfig)\n \n-const db = getDatabase(appFirebase)\n+// const db = getDatabase(appFirebase)\n \n async function fnGet () {\n   return await appFirebase.database().ref('data')\n }\n"
+                },
+                {
+                    "date": 1659180818184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n import { initializeApp } from 'firebase/app'\n+import { getDatabase } from 'firebase/database'\n \n const firebaseConfig = {\n   apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n   authDomain: 'kmg-back.firebaseapp.com',\n"
+                },
+                {
+                    "date": 1659180841433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n }\n \n // Initialize Firebase\n const appFirebase = initializeApp(firebaseConfig)\n+const database = getDatabase(appFirebase)\n \n // const db = getDatabase(appFirebase)\n \n async function fnGet () {\n"
+                },
+                {
+                    "date": 1659180899369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   return await appFirebase.database().ref('data')\n }\n \n fnGet()\n-console.log('col col', fnGet())\n+console.log('col col', database)\n \n const app = createApp(App)\n \n app.use(Antd)\n"
+                },
+                {
+                    "date": 1659180954093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   return await appFirebase.database().ref('data')\n }\n \n fnGet()\n-console.log('col col', database)\n+console.log('col col', database())\n \n const app = createApp(App)\n \n app.use(Antd)\n"
+                },
+                {
+                    "date": 1659181282362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,35 +3,8 @@\n import 'ant-design-vue/dist/antd.css'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-import { initializeApp } from 'firebase/app'\n-import { getDatabase } from 'firebase/database'\n-\n-const firebaseConfig = {\n-  apiKey: 'AIzaSyCzh11jalzIqgwmMFPzUSp6G0Th3h_wmas',\n-  authDomain: 'kmg-back.firebaseapp.com',\n-  databaseURL: 'https://kmg-back-default-rtdb.asia-southeast1.firebasedatabase.app',\n-  projectId: 'kmg-back',\n-  storageBucket: 'kmg-back.appspot.com',\n-  messagingSenderId: '528288816571',\n-  appId: '1:528288816571:web:3159b735e39b27cb59f89e'\n-}\n-\n-// Initialize Firebase\n-const appFirebase = initializeApp(firebaseConfig)\n-const database = getDatabase(appFirebase)\n-\n-// const db = getDatabase(appFirebase)\n-\n-async function fnGet () {\n-  return await appFirebase.database().ref('data')\n-}\n-\n-fnGet()\n-console.log('col col', database())\n-\n const app = createApp(App)\n \n app.use(Antd)\n-app.use(appFirebase)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659189844025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { createApp } from 'vue'\n import './style.css'\n import 'ant-design-vue/dist/antd.css'\n+import isMobile from '@/plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659189913388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n import isMobile from '@/plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-const app = createApp(App)\n+const app = createApp(App).use(isMobile)\n \n app.use(Antd)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659189929098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import isMobile from '@/plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n-const app = createApp(App).use(isMobile)\n+const app = createApp(App)\n+  .use(isMobile)\n+  .use(Antd)\n \n-app.use(Antd)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659189982390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createApp } from 'vue'\n import './style.css'\n import 'ant-design-vue/dist/antd.css'\n-import isMobile from '@/plugins/is-mobile'\n+import isMobile from './plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                }
+            ],
+            "date": 1659169243164,
+            "name": "Commit-0",
+            "content": "import { createApp } from 'vue'\nimport './style.css'\nimport Antd from 'ant-design-vue/es';\nimport App from './App.vue'\n\ncreateApp(App).mount('#app')\n"
+        }
+    ]
+}

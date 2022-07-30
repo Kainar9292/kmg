@@ -1,0 +1,126 @@
+{
+    "sourceFile": "src/components/Select/SelectAvailability.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1659184147848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659184165922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n <template>\n-  <div>\n+       <ASelect :options=\"[        {value: 'jack',\n+        label: 'Jack'}]\"/>\n+</template>\n \n-  </div>\n-</template>\n+<script setup>\n+\n+</script>\n"
+                },
+                {
+                    "date": 1659184176210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-\n+const options = ''\n </script>\n"
+                },
+                {
+                    "date": 1659184205401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,10 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-const options = ''\n+\n+const state = reactive({\n+  options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n+})\n+\n </script>\n"
+                },
+                {
+                    "date": 1659184644755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n+import StatusInDatabase '@/config/types'\n \n const state = reactive({\n   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n })\n"
+                },
+                {
+                    "date": 1659184650353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-import StatusInDatabase '@/config/types'\n+import {StatusInDatabase} '@/config/types'\n \n const state = reactive({\n   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n })\n"
+                },
+                {
+                    "date": 1659184659413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-import {StatusInDatabase} '@/config/types'\n+import {StatusInDatabase} '@/config/types';\n \n const state = reactive({\n   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n })\n"
+                },
+                {
+                    "date": 1659184687940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-import {StatusInDatabase} '@/config/types';\n+import { StatusInDatabase } from '@/config/types'\n \n const state = reactive({\n   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n })\n"
+                },
+                {
+                    "date": 1659184730774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n \n <script setup>\n import { StatusInDatabase } from '@/config/types'\n \n-const state = reactive({\n-  options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n-})\n+const Status = StatusInDatabase.object\n \n+// const state = reactive({\n+//   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n+// })\n+\n </script>\n"
+                },
+                {
+                    "date": 1659184765070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n \n <script setup>\n import { StatusInDatabase } from '@/config/types'\n \n-const Status = StatusInDatabase.object\n+// const Status = StatusInDatabase.object\n \n+const statuses = Object.values(StatusInDatabase)\n+\n // const state = reactive({\n //   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n // })\n \n"
+                },
+                {
+                    "date": 1659184846935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n         label: 'Jack'}]\"/>\n </template>\n \n <script setup>\n-import { StatusInDatabase } from '@/config/types'\n+import { STATUS_IN_DATABASE } from '@/config/types'\n \n // const Status = StatusInDatabase.object\n \n-const statuses = Object.values(StatusInDatabase)\n+const statuses = Object.values(STATUS_IN_DATABASE)\n \n // const state = reactive({\n //   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n // })\n"
+                },
+                {
+                    "date": 1659184855527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <template>\n-       <ASelect :options=\"[        {value: 'jack',\n-        label: 'Jack'}]\"/>\n+       <ASelect :options=\"statuses\"/>\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '@/config/types'\n"
+                },
+                {
+                    "date": 1659184860677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-       <ASelect :options=\"statuses\"/>\n+  <ASelect :options=\"statuses\"/>\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '@/config/types'\n"
+                },
+                {
+                    "date": 1659184925895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <ASelect :options=\"statuses\"/>\n </template>\n \n <script setup>\n-import { STATUS_IN_DATABASE } from '@/config/types'\n+import { STATUS_IN_DATABASE } from '@/config/types.js'\n \n // const Status = StatusInDatabase.object\n \n const statuses = Object.values(STATUS_IN_DATABASE)\n"
+                },
+                {
+                    "date": 1659184939952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <ASelect :options=\"statuses\"/>\n </template>\n \n <script setup>\n-import { STATUS_IN_DATABASE } from '@/config/types.js'\n+import { STATUS_IN_DATABASE } from '@/config/types'\n \n // const Status = StatusInDatabase.object\n \n const statuses = Object.values(STATUS_IN_DATABASE)\n"
+                },
+                {
+                    "date": 1659184999512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <ASelect :options=\"statuses\"/>\n </template>\n \n <script setup>\n-import { STATUS_IN_DATABASE } from '@/config/types'\n+import { STATUS_IN_DATABASE } from '../../config/types'\n \n // const Status = StatusInDatabase.object\n \n const statuses = Object.values(STATUS_IN_DATABASE)\n"
+                },
+                {
+                    "date": 1659185214927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { STATUS_IN_DATABASE } from '../../config/types'\n \n // const Status = StatusInDatabase.object\n \n-const statuses = Object.values(STATUS_IN_DATABASE)\n+const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n \n // const state = reactive({\n //   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n // })\n"
+                },
+                {
+                    "date": 1659185230398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n+import { extendForSelect } from '@/utils/utils'\n \n // const Status = StatusInDatabase.object\n \n const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n"
+                },
+                {
+                    "date": 1659185251564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,7 @@\n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '@/utils/utils'\n \n-// const Status = StatusInDatabase.object\n-\n const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n \n-// const state = reactive({\n-//   options: objectValues(UnitType).map(opt => ({ ...opt, title: t(opt.title) }))\n-// })\n-\n </script>\n"
+                },
+                {
+                    "date": 1659185279934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '@/utils/utils'\n \n const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n-\n+const state = reactive({\n+  options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n+})\n </script>\n"
+                },
+                {
+                    "date": 1659185287332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '@/utils/utils'\n \n-const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n+// const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n const state = reactive({\n   options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n })\n </script>\n"
+                },
+                {
+                    "date": 1659185322203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <ASelect :options=\"statuses\"/>\n+  <ASelect :options=\"state.options\"/>\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n"
+                },
+                {
+                    "date": 1659185338259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n-import { extendForSelect } from '@/utils/utils'\n+import { extendForSelect } from '../../utils/utils'\n \n // const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n const state = reactive({\n   options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n"
+                },
+                {
+                    "date": 1659185450259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '../../utils/utils'\n+import { reactive } from 'vue'\n \n // const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n const state = reactive({\n   options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n"
+                },
+                {
+                    "date": 1659185480320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n <template>\n-  <ASelect :options=\"state.options\"/>\n+  <ASelect :options=\"state.options\"\n+\n+      v-bind=\"$attrs\"\n+    allow-clear\n+    :filter-option=\"false\"/>\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n"
+                },
+                {
+                    "date": 1659185489139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <template>\n   <ASelect :options=\"state.options\"\n-\n-      v-bind=\"$attrs\"\n+    v-bind=\"$attrs\"\n     allow-clear\n-    :filter-option=\"false\"/>\n+    :filter-option=\"false\"\n+  />\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n"
+                },
+                {
+                    "date": 1659185701172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <template>\n   <ASelect :options=\"state.options\"\n     v-bind=\"$attrs\"\n-    allow-clear\n     :filter-option=\"false\"\n   />\n </template>\n \n"
+                },
+                {
+                    "date": 1659190623257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,15 @@\n <template>\n   <ASelect :options=\"state.options\"\n-    v-bind=\"$attrs\"\n-    :filter-option=\"false\"\n+\n   />\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '../../utils/utils'\n import { reactive } from 'vue'\n \n-// const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n const state = reactive({\n   options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n })\n </script>\n"
+                }
+            ],
+            "date": 1659184147848,
+            "name": "Commit-0",
+            "content": "<template>\n  <div>\n\n  </div>\n</template>\n"
+        }
+    ]
+}

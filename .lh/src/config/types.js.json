@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/config/types.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659184963171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659184963171,
+            "name": "Commit-0",
+            "content": "export const WELL_TYPES = {\r\n  Mining: { id: 1, title: 'Добывающая' },\r\n  NoMining: { id: 2, title: 'Не дбывающая' }\r\n}\r\n\r\nexport const WELL_CONDITION = {\r\n  Observant: { id: 1, title: 'Наблюдательная' },\r\n  InWork: { id: 2, title: 'В работе' },\r\n  Idle: { id: 3, title: 'В простое' }\r\n}\r\n\r\nexport const STATUS_IN_DATABASE = {\r\n  Saved: { id: 1, title: 'Сохранен' },\r\n  NotSaved: { id: 2, title: 'Не Сохранен' }\r\n}\r\n\r\nexport const HORIZON = {\r\n  One: { id: 1, title: 'I' },\r\n  Two: { id: 2, title: 'II' },\r\n  Three: { id: 3, title: 'III' },\r\n  Four: { id: 4, title: 'IV' },\r\n  Five: { id: 5, title: 'V' },\r\n  Six: { id: 6, title: 'VI' }\r\n}\r\n"
+        }
+    ]
+}

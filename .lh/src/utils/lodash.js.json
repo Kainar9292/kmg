@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/utils/lodash.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1659190070995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659190410700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import debounce from 'lodash/debounce' // todo replace for optimization\r\n import throttle from 'lodash/throttle' // todo replace for optimization\r\n import cloneDeep from 'lodash/cloneDeep' // todo replace for optimization\r\n-// import round from 'lodash/round';\r\n+\r\n import truncate from 'lodash/truncate' // todo replace for optimization\r\n import get from 'lodash/get' // todo replace for optimization\r\n import uniqBy from 'lodash/uniqBy' // todo replace for optimization\r\n \r\n"
+                },
+                {
+                    "date": 1659190573585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n import debounce from 'lodash/debounce' // todo replace for optimization\r\n import throttle from 'lodash/throttle' // todo replace for optimization\r\n import cloneDeep from 'lodash/cloneDeep' // todo replace for optimization\r\n \r\n-import truncate from 'lodash/truncate' // todo replace for optimization\r\n-import get from 'lodash/get' // todo replace for optimization\r\n-import uniqBy from 'lodash/uniqBy' // todo replace for optimization\r\n-\r\n-export { cloneDeep, debounce, throttle, uniqBy, truncate, get }\r\n+export { cloneDeep, debounce, throttle }\r\n"
+                },
+                {
+                    "date": 1659190607457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import debounce from 'lodash/debounce' // todo replace for optimization\r\n-import throttle from 'lodash/throttle' // todo replace for optimization\r\n-import cloneDeep from 'lodash/cloneDeep' // todo replace for optimization\r\n+import debounce from 'lodash/debounce'\r\n+import throttle from 'lodash/throttle'\r\n+import cloneDeep from 'lodash/cloneDeep'\r\n \r\n export { cloneDeep, debounce, throttle }\r\n"
+                }
+            ],
+            "date": 1659190070995,
+            "name": "Commit-0",
+            "content": "import debounce from 'lodash/debounce' // todo replace for optimization\r\nimport throttle from 'lodash/throttle' // todo replace for optimization\r\nimport cloneDeep from 'lodash/cloneDeep' // todo replace for optimization\r\n// import round from 'lodash/round';\r\nimport truncate from 'lodash/truncate' // todo replace for optimization\r\nimport get from 'lodash/get' // todo replace for optimization\r\nimport uniqBy from 'lodash/uniqBy' // todo replace for optimization\r\n\r\nexport { cloneDeep, debounce, throttle, uniqBy, truncate, get }\r\n"
+        }
+    ]
+}

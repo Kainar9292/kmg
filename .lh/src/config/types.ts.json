@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/config/types.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1659184480116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659184498362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+export const WellType = {\r\n+  Mining: { id: 1, title: 'Добывающая' },\r\n+  NoMining: { id: 2, title: 'Не дбывающая' }\r\n+}\r\n+\r\n+export const WellCondition = {\r\n+  Observant: { id: 1, title: 'Наблюдательная' },\r\n+  InWork: { id: 2, title: 'В работе' },\r\n+  Idle: { id: 3, title: 'В простое' }\r\n+}\r\n+\r\n+export const Horizon = {\r\n+  One: { id: 1, title: 'I' },\r\n+  Two: { id: 2, title: 'II' },\r\n+  Three: { id: 3, title: 'III' },\r\n+  Four: { id: 4, title: 'IV' },\r\n+  Five: { id: 5, title: 'V' },\r\n+  Six: { id: 6, title: 'VI' }\r\n+}\r\n"
+                },
+                {
+                    "date": 1659184512429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,10 @@\n   InWork: { id: 2, title: 'В работе' },\r\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n+export const \r\n+\r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n   Two: { id: 2, title: 'II' },\r\n   Three: { id: 3, title: 'III' },\r\n"
+                },
+                {
+                    "date": 1659184536583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   InWork: { id: 2, title: 'В работе' },\r\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n-export const \r\n+export const Status\r\n \r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n   Two: { id: 2, title: 'II' },\r\n"
+                },
+                {
+                    "date": 1659184549712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n   InWork: { id: 2, title: 'В работе' },\r\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n-export const Status\r\n+export const StatusInDatabase = {\r\n+  S\r\n+}\r\n \r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n   Two: { id: 2, title: 'II' },\r\n"
+                },
+                {
+                    "date": 1659184566921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n export const StatusInDatabase = {\r\n-  S\r\n+  Saved: { id: 1, title: '' }\r\n }\r\n \r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n"
+                },
+                {
+                    "date": 1659184574913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n export const StatusInDatabase = {\r\n-  Saved: { id: 1, title: '' }\r\n+  Saved: { id: 1, title: 'Сохране' }\r\n+  Saved: { id: 1, title: 'Сохране' }\r\n }\r\n \r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n"
+                },
+                {
+                    "date": 1659184598568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n \r\n export const StatusInDatabase = {\r\n   Saved: { id: 1, title: 'Сохране' }\r\n-  Saved: { id: 1, title: 'Сохране' }\r\n+  NotSaved: { id: 2, title: 'Не Сохранен' }\r\n }\r\n \r\n export const Horizon = {\r\n   One: { id: 1, title: 'I' },\r\n"
+                },
+                {
+                    "date": 1659184610137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n export const StatusInDatabase = {\r\n-  Saved: { id: 1, title: 'Сохране' }\r\n+  Saved: { id: 1, title: 'Сохранен' },\r\n   NotSaved: { id: 2, title: 'Не Сохранен' }\r\n }\r\n \r\n export const Horizon = {\r\n"
+                },
+                {
+                    "date": 1659184803016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export const WellType = {\r\n+export const WELL_TYPE = {\r\n   Mining: { id: 1, title: 'Добывающая' },\r\n   NoMining: { id: 2, title: 'Не дбывающая' }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1659184838515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,21 @@\n-export const WELL_TYPE = {\r\n+export const WELL_TYPES = {\r\n   Mining: { id: 1, title: 'Добывающая' },\r\n   NoMining: { id: 2, title: 'Не дбывающая' }\r\n }\r\n \r\n-export const WellCondition = {\r\n+export const WELL_CONDITION = {\r\n   Observant: { id: 1, title: 'Наблюдательная' },\r\n   InWork: { id: 2, title: 'В работе' },\r\n   Idle: { id: 3, title: 'В простое' }\r\n }\r\n \r\n-export const StatusInDatabase = {\r\n+export const STATUS_IN_DATABASE = {\r\n   Saved: { id: 1, title: 'Сохранен' },\r\n   NotSaved: { id: 2, title: 'Не Сохранен' }\r\n }\r\n \r\n-export const Horizon = {\r\n+export const HORIZON = {\r\n   One: { id: 1, title: 'I' },\r\n   Two: { id: 2, title: 'II' },\r\n   Three: { id: 3, title: 'III' },\r\n   Four: { id: 4, title: 'IV' },\r\n"
+                }
+            ],
+            "date": 1659184480116,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}
