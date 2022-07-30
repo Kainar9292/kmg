@@ -1,0 +1,34 @@
+{
+    "sourceFile": ".eslintrc.cjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1659191353670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659191365730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,11 @@\n   plugins: [\n     'vue'\n   ],\n   rules: {\n+    no-console': 'off',\n+    'linebreak-style': ['error', 'windows'], // windows, unix\n+    'semi': ['error', 'always'],\n+    // 'curly': ['error', 'all'],\n+    'eslint-comments/no-unlimited-disable': 'off',\n   }\n }\n"
+                },
+                {
+                    "date": 1659191377070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   plugins: [\n     'vue'\n   ],\n   rules: {\n-    no-console': 'off',\n+    'no-console': 'off',\n     'linebreak-style': ['error', 'windows'], // windows, unix\n     'semi': ['error', 'always'],\n     // 'curly': ['error', 'all'],\n     'eslint-comments/no-unlimited-disable': 'off',\n"
+                },
+                {
+                    "date": 1659191395256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,9 @@\n     'linebreak-style': ['error', 'windows'], // windows, unix\n     'semi': ['error', 'always'],\n     // 'curly': ['error', 'all'],\n     'eslint-comments/no-unlimited-disable': 'off',\n+        'vue/max-attributes-per-line': ['error', {\n+      singleline: 2,\n+    }],\n   }\n }\n"
+                },
+                {
+                    "date": 1659191416832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,19 @@\n     'linebreak-style': ['error', 'windows'], // windows, unix\n     'semi': ['error', 'always'],\n     // 'curly': ['error', 'all'],\n     'eslint-comments/no-unlimited-disable': 'off',\n-        'vue/max-attributes-per-line': ['error', {\n+    'vue/max-attributes-per-line': ['error', {\n       singleline: 2,\n     }],\n+\n+    'vue/attributes-order': ['error', {\n+      alphabetical: true,\n+    }],\n+    'vue/component-tags-order': ['error', {\n+      order: ['template', 'script', 'style'],\n+    }],\n+    'vue/component-name-in-template-casing': ['error', 'PascalCase', {\n+      registeredComponentsOnly: false,\n+    }],\n   }\n }\n"
+                }
+            ],
+            "date": 1659191353670,
+            "name": "Commit-0",
+            "content": "module.exports = {\n  env: {\n    es2021: true\n  },\n  extends: [\n    '@antfu/eslint-config-vue'\n  ],\n  parserOptions: {\n    ecmaVersion: 'latest',\n    sourceType: 'module'\n  },\n  plugins: [\n    'vue'\n  ],\n  rules: {\n  }\n}\n"
+        }
+    ]
+}

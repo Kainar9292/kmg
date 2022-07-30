@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/form/SelectField.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659193805104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659193805104,
+            "name": "Commit-0",
+            "content": "<template>\n  <ASelect :options=\"state.options\" allow-clear :filter-option=\"false\" />\n</template>\n\n<script setup>\nimport { FIELD_LIST } from \"../../config/types\";\nimport { extendForSelect } from \"../../utils/utils\";\nimport { reactive } from \"vue\";\n\nconst state = reactive({\n  options: FIELD_LIST.map((item) => extendForSelect(item, \"title\")),\n});\n</script>\n"
+        }
+    ]
+}

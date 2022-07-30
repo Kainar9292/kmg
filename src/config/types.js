@@ -22,3 +22,10 @@ export const HORIZON = {
   Five: { id: 5, title: 'V' },
   Six: { id: 6, title: 'VI' }
 }
+
+
+export const FIELD_LIST = [
+  { id: 1, title: 'AA' },
+  { id: 2, title: 'BB' },
+  { id: 3, title: 'CC' },
+]

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 34,
+            "activePatchIndex": 43,
             "patches": [
                 {
                     "date": 1659169243164,
@@ -144,6 +144,42 @@
                 {
                     "date": 1659189982390,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createApp } from 'vue'\n import './style.css'\n import 'ant-design-vue/dist/antd.css'\n-import isMobile from '@/plugins/is-mobile'\n+import isMobile from './plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659191141475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createApp } from 'vue'\n-import './style.css'\n+import './scss/app.scss'\n import 'ant-design-vue/dist/antd.css'\n import isMobile from './plugins/is-mobile'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n"
+                },
+                {
+                    "date": 1659192495094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n import 'ant-design-vue/dist/antd.css'\n import isMobile from './plugins/is-mobile'\n+import { registerGlobalComponents } from '@/components/global-components';\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659192509542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,8 @@\n const app = createApp(App)\n   .use(isMobile)\n   .use(Antd)\n \n+\n+registerGlobalComponents(app)\n+\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1659192577433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n import 'ant-design-vue/dist/antd.css'\n import isMobile from './plugins/is-mobile'\n-import { registerGlobalComponents } from '@/components/global-components';\n+import { registerGlobalComponents } from '.global-components';\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659192589441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n import 'ant-design-vue/dist/antd.css'\n import isMobile from './plugins/is-mobile'\n-import { registerGlobalComponents } from '.global-components';\n+import { registerGlobalComponents } from './components/global-components\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659192624034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n import 'ant-design-vue/dist/antd.css'\n import isMobile from './plugins/is-mobile'\n-import { registerGlobalComponents } from './components/global-components\n+import { registerGlobalComponents } from './components/global-components'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n const app = createApp(App)\n"
+                },
+                {
+                    "date": 1659195507210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n-import 'ant-design-vue/dist/antd.css'\n+import 'ant-design-vue/dist/antd.min.css';\n import isMobile from './plugins/is-mobile'\n import { registerGlobalComponents } from './components/global-components'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n"
+                },
+                {
+                    "date": 1659198633639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { createApp } from 'vue'\n import './scss/app.scss'\n import 'ant-design-vue/dist/antd.min.css';\n import isMobile from './plugins/is-mobile'\n+import store from './store';\n import { registerGlobalComponents } from './components/global-components'\n import Antd from 'ant-design-vue/es'\n import App from './App.vue'\n \n"
+                },
+                {
+                    "date": 1659198648013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \n const app = createApp(App)\n   .use(isMobile)\n   .use(Antd)\n+    .use(store)\n \n \n registerGlobalComponents(app)\n \n"
                 }
             ],
             "date": 1659169243164,

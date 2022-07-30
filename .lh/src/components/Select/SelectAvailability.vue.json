@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 27,
+            "activePatchIndex": 29,
             "patches": [
                 {
                     "date": 1659184147848,
@@ -116,6 +116,14 @@
                 {
                     "date": 1659190623257,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,15 @@\n <template>\n   <ASelect :options=\"state.options\"\n-    v-bind=\"$attrs\"\n-    :filter-option=\"false\"\n+\n   />\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from '../../config/types'\n import { extendForSelect } from '../../utils/utils'\n import { reactive } from 'vue'\n \n-// const statuses = Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n const state = reactive({\n   options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n })\n </script>\n"
+                },
+                {
+                    "date": 1659192323755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n <template>\n-  <ASelect :options=\"state.options\"\n-\n-  />\n+  <ASelect :options=\"state.options\" />\n </template>\n \n <script setup>\n-import { STATUS_IN_DATABASE } from '../../config/types'\n-import { extendForSelect } from '../../utils/utils'\n-import { reactive } from 'vue'\n+import { STATUS_IN_DATABASE } from \"../../config/types\";\n+import { extendForSelect } from \"../../utils/utils\";\n+import { reactive } from \"vue\";\n \n const state = reactive({\n-  options: Object.values(STATUS_IN_DATABASE).map(item => extendForSelect(item, 'title'))\n-})\n+  options: Object.values(STATUS_IN_DATABASE).map((item) =>\n+    extendForSelect(item, \"title\")\n+  ),\n+});\n </script>\n"
+                },
+                {
+                    "date": 1659192351311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <ASelect :options=\"state.options\" />\n+  <ASelect :options=\"state.options\" allow-clear :filter-option=\"false\" />\n </template>\n \n <script setup>\n import { STATUS_IN_DATABASE } from \"../../config/types\";\n"
                 }
             ],
             "date": 1659184147848,

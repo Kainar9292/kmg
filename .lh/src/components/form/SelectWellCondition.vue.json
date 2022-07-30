@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/form/SelectWellCondition.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659194236583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659194236583,
+            "name": "Commit-0",
+            "content": "<template>\n  <ASelect :options=\"state.options\" allow-clear :filter-option=\"false\" />\n</template>\n\n<script setup>\nimport { WELL_CONDITION } from \"../../config/types\";\nimport { extendForSelect } from \"../../utils/utils\";\nimport { reactive } from \"vue\";\n\nconst state = reactive({\n  options: Object.values(WELL_CONDITION).map((item) => extendForSelect(item, \"title\")),\n});\n</script>\n"
+        }
+    ]
+}

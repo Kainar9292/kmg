@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/components/global-components.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1659192426018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659192435408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n+import SelectAvailability from \"./components/Select/SelectAvailability.vue\";\n+import DefTable from \"./components/Lib/DefTable.vue\";\n \n \n-\n export function registerGlobalComponents(app) {\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659192462293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,10 @@\n import DefTable from \"./components/Lib/DefTable.vue\";\n \n \n export function registerGlobalComponents(app) {\n+  const Vue = app; \n \n+  Vue.component('SelectAvailability', SelectAvailability);\n+  Vue.component('DefTable', DefTable);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659192467796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n-\n   Vue.component('SelectAvailability', SelectAvailability);\n   Vue.component('DefTable', DefTable);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659192537852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import SelectAvailability from \"./components/Select/SelectAvailability.vue\";\n-import DefTable from \"./components/Lib/DefTable.vue\";\n+import SelectAvailability from \"./Select/components/Select/SelectAvailability.vue\";\n+import DefTable from \"./Lib/components/Lib/DefTable.vue\";\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n"
+                },
+                {
+                    "date": 1659192557889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import SelectAvailability from \"./Select/components/Select/SelectAvailability.vue\";\n+import SelectAvailability from \"./Form/components/Select/SelectAvailability.vue\";\n import DefTable from \"./Lib/components/Lib/DefTable.vue\";\n \n \n export function registerGlobalComponents(app) {\n"
+                },
+                {
+                    "date": 1659192644635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import SelectAvailability from \"./Form/components/Select/SelectAvailability.vue\";\n-import DefTable from \"./Lib/components/Lib/DefTable.vue\";\n+import SelectAvailability from \"./form/components/Select/SelectAvailability.vue\";\n+import DefTable from \"./lib/components/Lib/DefTable.vue\";\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n"
+                },
+                {
+                    "date": 1659192694826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-import SelectAvailability from \"./form/components/Select/SelectAvailability.vue\";\n-import DefTable from \"./lib/components/Lib/DefTable.vue\";\n+import SelectAvailability from \"./form/Select/SelectAvailability.vue\";\n+import DefTable from \"./lib/Lib/DefTable.vue\";\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n-  Vue.component('SelectAvailability', SelectAvailability);\n+  Vue.component('SelectAvailability', SelectAvailability);a\n   Vue.component('DefTable', DefTable);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659192713897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-import SelectAvailability from \"./form/Select/SelectAvailability.vue\";\n-import DefTable from \"./lib/Lib/DefTable.vue\";\n+import SelectAvailability from \"./form/SelectAvailability.vue\n+import DefTable from \"./lib/DefTable.vue\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n-  Vue.component('SelectAvailability', SelectAvailability);a\n+  Vue.component('SelectAvailability', SelectAvailability);\n   Vue.component('DefTable', DefTable);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659192720819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import SelectAvailability from \"./form/SelectAvailability.vue\n-import DefTable from \"./lib/DefTable.vue\n+import SelectAvailability from \"./form/SelectAvailability.vue\"\n+import DefTable from \"./lib/DefTable.vue\"\n \n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n"
+                },
+                {
+                    "date": 1659193865196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import SelectAvailability from \"./form/SelectAvailability.vue\"\n import DefTable from \"./lib/DefTable.vue\"\n+import SelectField from \"./components/form/SelectField.vue\";\n \n-\n export function registerGlobalComponents(app) {\n   const Vue = app; \n+  Vue.component('DefTable', DefTable);\n   Vue.component('SelectAvailability', SelectAvailability);\n-  Vue.component('DefTable', DefTable);\n+  Vue.component('SelectField', SelectField);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659193878816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import SelectAvailability from \"./form/SelectAvailability.vue\"\n import DefTable from \"./lib/DefTable.vue\"\n-import SelectField from \"./components/form/SelectField.vue\";\n+import SelectField from \"./form/components/form/SelectField.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n"
+                },
+                {
+                    "date": 1659193884188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+import DefTable from \"./lib/DefTable.vue\"\n import SelectAvailability from \"./form/SelectAvailability.vue\"\n-import DefTable from \"./lib/DefTable.vue\"\n import SelectField from \"./form/components/form/SelectField.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n"
+                },
+                {
+                    "date": 1659193900410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import DefTable from \"./lib/DefTable.vue\"\n-import SelectAvailability from \"./form/SelectAvailability.vue\"\n+import DefTable from \"./lib/DefTable.vue\";\n+import SelectAvailability from \"./form/SelectAvailability.vue\";\n import SelectField from \"./form/components/form/SelectField.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n"
+                },
+                {
+                    "date": 1659193912189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import DefTable from \"./lib/DefTable.vue\";\n import SelectAvailability from \"./form/SelectAvailability.vue\";\n-import SelectField from \"./form/components/form/SelectField.vue\";\n+import SelectField from \"./form/form/SelectField.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n"
+                },
+                {
+                    "date": 1659194079547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import DefTable from \"./lib/DefTable.vue\";\n import SelectAvailability from \"./form/SelectAvailability.vue\";\n-import SelectField from \"./form/form/SelectField.vue\";\n+import SelectField from \"./form/SelectField.vue\";\n+import SelectField from \"./form/SelectField.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n"
+                },
+                {
+                    "date": 1659194110863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import DefTable from \"./lib/DefTable.vue\";\n import SelectAvailability from \"./form/SelectAvailability.vue\";\n import SelectField from \"./form/SelectField.vue\";\n-import SelectField from \"./form/SelectField.vue\";\n+import SelectWellType from \"./form/SelectWellType.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n"
+                },
+                {
+                    "date": 1659194117270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n   Vue.component('SelectAvailability', SelectAvailability);\n   Vue.component('SelectField', SelectField);\n+  Vue.component('SelectWellType', SelectWellType);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659194276681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n import DefTable from \"./lib/DefTable.vue\";\n import SelectAvailability from \"./form/SelectAvailability.vue\";\n import SelectField from \"./form/SelectField.vue\";\n import SelectWellType from \"./form/SelectWellType.vue\";\n+import SelectWellCondition from \"./form/SelectWellCondition.vue\";\n \n export function registerGlobalComponents(app) {\n   const Vue = app; \n   Vue.component('DefTable', DefTable);\n   Vue.component('SelectAvailability', SelectAvailability);\n   Vue.component('SelectField', SelectField);\n   Vue.component('SelectWellType', SelectWellType);\n+  Vue.component('SelectWellCondition', SelectWellCondition);\n \n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1659192426018,
+            "name": "Commit-0",
+            "content": "\n\n\nexport function registerGlobalComponents(app) {\n\n\n}"
+        }
+    ]
+}

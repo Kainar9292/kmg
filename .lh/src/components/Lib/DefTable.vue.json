@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/Lib/DefTable.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1659191628721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659191637101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,5 @@\n     :columns=\"columns\"\n     :data-source=\"saveField\"\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n   />\n-\n-  <ATable\n-    :columns=\"columns\"\n-    :data-source=\"saveField\"\n-    :scroll=\"{ x: $isMobile ? 1024 : true }\"\n-  />\n </template>\n"
+                },
+                {
+                    "date": 1659191655523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,6 @@\n     :data-source=\"saveField\"\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n   />\n </template>\n+\n+<script setup></script>\n"
+                },
+                {
+                    "date": 1659191703748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,17 @@\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n   />\n </template>\n \n-<script setup></script>\n+<script setup>\n+\n+const props = withDefaults(defineProps<{\n+  pagination?: UsePaginationReturn\n+  dataSource: NonNullable<TableProps['dataSource']>\n+  columns: TableColumnProps[]\n+  rowKey?: string\n+}>(), {\n+  rowKey: 'id',\n+});\n+\n+const size = inject<Ref<SizeType>>('size', ref('middle'));\n+</script>\n"
+                },
+                {
+                    "date": 1659191740729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n \n <script setup>\n \n const props = withDefaults(defineProps<{\n-  pagination?: UsePaginationReturn\n   dataSource: NonNullable<TableProps['dataSource']>\n   columns: TableColumnProps[]\n   rowKey?: string\n }>(), {\n"
+                },
+                {
+                    "date": 1659191822951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,8 @@\n   />\n </template>\n \n <script setup>\n+const props = [\"columns\"];\n \n-const props = withDefaults(defineProps<{\n-  dataSource: NonNullable<TableProps['dataSource']>\n-  columns: TableColumnProps[]\n-  rowKey?: string\n-}>(), {\n-  rowKey: 'id',\n-});\n-\n-const size = inject<Ref<SizeType>>('size', ref('middle'));\n+const size = inject < Ref < SizeType >> (\"size\", ref(\"middle\"));\n </script>\n"
+                },
+                {
+                    "date": 1659191868241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   />\n </template>\n \n <script setup>\n-const props = [\"columns\"];\n+const props = {\n+  columns: {},\n+};\n \n const size = inject < Ref < SizeType >> (\"size\", ref(\"middle\"));\n </script>\n"
+                },
+                {
+                    "date": 1659191880043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,12 @@\n </template>\n \n <script setup>\n const props = {\n-  columns: {},\n+  columns: {\n+    type: Object,\n+    default: null,\n+  },\n };\n \n const size = inject < Ref < SizeType >> (\"size\", ref(\"middle\"));\n </script>\n"
+                },
+                {
+                    "date": 1659191901058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <template>\n   <ATable\n+    v-bind=\"$attrs\"\n     :columns=\"columns\"\n     :data-source=\"saveField\"\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n   />\n"
+                },
+                {
+                    "date": 1659191926026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n </template>\n \n <script setup>\n const props = {\n-  columns: {\n-    type: Object,\n-    default: null,\n+  actions: {\n+    type: Array,\n+    default: () => [],\n   },\n };\n \n const size = inject < Ref < SizeType >> (\"size\", ref(\"middle\"));\n"
+                },
+                {
+                    "date": 1659191948164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     v-bind=\"$attrs\"\n     :columns=\"columns\"\n     :data-source=\"saveField\"\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n+    row-key=\"id\"\n   />\n </template>\n \n <script setup>\n"
+                },
+                {
+                    "date": 1659191975038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,13 @@\n     :columns=\"columns\"\n     :data-source=\"saveField\"\n     :scroll=\"{ x: $isMobile ? 1024 : true }\"\n     row-key=\"id\"\n-  />\n+  >\n+    <template v-for=\"(_, name) in $slots\" #[name]=\"slotData\">\n+      <slot :name=\"name\" v-bind=\"{ ...slotData }\" />\n+    </template>\n+  </ATable>\n </template>\n \n <script setup>\n const props = {\n"
+                },
+                {
+                    "date": 1659191986936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,5 @@\n     type: Array,\n     default: () => [],\n   },\n };\n-\n-const size = inject < Ref < SizeType >> (\"size\", ref(\"middle\"));\n </script>\n"
+                },
+                {
+                    "date": 1659192018257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,4 @@\n       <slot :name=\"name\" v-bind=\"{ ...slotData }\" />\n     </template>\n   </ATable>\n </template>\n-\n-<script setup>\n-const props = {\n-  actions: {\n-    type: Array,\n-    default: () => [],\n-  },\n-};\n-</script>\n"
+                },
+                {
+                    "date": 1659192214507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n <template>\n-  <ATable\n-    v-bind=\"$attrs\"\n-    :columns=\"columns\"\n-    :data-source=\"saveField\"\n-    :scroll=\"{ x: $isMobile ? 1024 : true }\"\n-    row-key=\"id\"\n-  >\n+  <ATable v-bind=\"$attrs\" :scroll=\"{ x: $isMobile ? 1024 : true }\" row-key=\"id\">\n     <template v-for=\"(_, name) in $slots\" #[name]=\"slotData\">\n       <slot :name=\"name\" v-bind=\"{ ...slotData }\" />\n     </template>\n   </ATable>\n"
+                },
+                {
+                    "date": 1659192234248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <ATable v-bind=\"$attrs\" :scroll=\"{ x: $isMobile ? 1024 : true }\" row-key=\"id\">\n+  <ATable v-bind=\"$attrs\" row-key=\"id\">\n     <template v-for=\"(_, name) in $slots\" #[name]=\"slotData\">\n       <slot :name=\"name\" v-bind=\"{ ...slotData }\" />\n     </template>\n   </ATable>\n"
+                }
+            ],
+            "date": 1659191628721,
+            "name": "Commit-0",
+            "content": "<template>\n  <ATable\n    :columns=\"columns\"\n    :data-source=\"saveField\"\n    :scroll=\"{ x: $isMobile ? 1024 : true }\"\n  />\n\n  <ATable\n    :columns=\"columns\"\n    :data-source=\"saveField\"\n    :scroll=\"{ x: $isMobile ? 1024 : true }\"\n  />\n</template>\n"
+        }
+    ]
+}
