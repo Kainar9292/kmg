@@ -2,6 +2,7 @@ import { createStore } from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
 
 import field from './modules/field.store'
+import other from './modules/other.store'
 
 export default createStore({
   state: {},
@@ -10,8 +11,9 @@ export default createStore({
   getters: {},
   modules: {
     field,
+    other
   },
   plugins: [createPersistedState({
-    paths: ['field'],
+    paths: ['other'],
   })],
 });

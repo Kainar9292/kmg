@@ -1,22 +1,27 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+
+#app {
+  height: 100%;
   font-weight: 400;
+  .page-layout {
+    min-height: 100vh;
+    .ant-layout-content {
+      padding: 40px 25px;
+    }
+  }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  .page-header {
+    position: relative;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+    transition: width .2s;
+    background-color: #fff
+  }
 }
 
-html {
-  background: red;
+.card {
+  min-height:calc(100% - 64px) 
 }
 
 a {
@@ -39,7 +44,6 @@ a:hover {
 
 body {
   margin: 0;
-  background: red;
 }
 
 h1 {
@@ -51,16 +55,8 @@ h1 {
   padding: 2em;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .ant-select,
 .ant-input,
-.ant-picker,
 .ant-input-number,
 .input {
   width: 100%;

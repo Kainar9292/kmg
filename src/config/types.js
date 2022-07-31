@@ -1,6 +1,6 @@
 export const WELL_TYPES = {
   Mining: { id: 1, title: 'Добывающая' },
-  NoMining: { id: 2, title: 'Не дбывающая' }
+  NoMining: { id: 2, title: 'Не добывающая' }
 }
 
 export const WELL_CONDITION = {

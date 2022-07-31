@@ -3,13 +3,11 @@
 </template>
 
 <script setup>
-import { FIELD_LIST } from "../../config/types";
+import { HORIZON } from "../../config/types";
 import { extendForSelect } from "../../utils/utils";
 import { reactive } from "vue";
 
 const state = reactive({
-  options: FIELD_LIST.map((item) => extendForSelect(item, "title")).map((item) => {
-    return { label: item.label, value: item.label };
-  }),
+  options: Object.values(HORIZON).map((item) => extendForSelect(item, "title")),
 });
 </script>
