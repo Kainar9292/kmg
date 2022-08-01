@@ -6,6 +6,8 @@ import SelectWellType from "./form/SelectWellType.vue";
 import SelectWellCondition from "./form/SelectWellCondition.vue";
 import SelectWell from "./form/SelectWell.vue";
 import SelectHorizon from "./form/SelectHorizon.vue";
+import {  PieChart } from 'vue-chart-3';
+
 
 export function registerGlobalComponents(app) {
   const Vue = app; 
@@ -17,5 +19,6 @@ export function registerGlobalComponents(app) {
   Vue.component('SelectWellCondition', SelectWellCondition);
   Vue.component('SelectWell', SelectWell);
   Vue.component('SelectHorizon', SelectHorizon);
+  Vue.component('PieChart', PieChart);
 
 }

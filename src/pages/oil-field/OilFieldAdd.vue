@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import OilFieldForm from "./components/OilFieldForm.vue";
+import OilFieldForm from "@/pages/oil-field/components/OilFieldForm.vue"
 import { notification } from "ant-design-vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";

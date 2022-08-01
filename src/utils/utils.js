@@ -42,7 +42,7 @@ export function removeDuplicates(arr) {
 }
 
 export function hasString(item, searchText) {
-  return e.toLowerCase().includes(t.toLowerCase());
+  return item.toLowerCase().includes(searchText.toLowerCase());
 }
 
 export function searhToId(item, searchId) {

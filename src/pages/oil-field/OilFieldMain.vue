@@ -6,16 +6,17 @@
       </RouterLink>
     </template>
   </APageHeader>
-
   <ACard class="card">
     <AForm layout="vertical">
-      <ARow :gutter="[16, 16]">
+      <ARow :gutter="[16, 0]">
         <ACol :lg="6" :sm="12" :xs="24">
           <AFormItem label="Статус в БД">
             <SelectAvailability
               size="large"
+              :allow-clear="false"
               v-model:value="filters.savedId"
               placeholder="Статус"
+              @change="submitFilters"
             />
           </AFormItem>
         </ACol>
@@ -25,6 +26,7 @@
               size="large"
               placeholder="Месторождение"
               v-model:value="filters.field"
+              @change="submitFilters"
             />
           </AFormItem>
         </ACol>
@@ -34,6 +36,7 @@
               size="large"
               placeholder="Тип"
               v-model:value="filters.wellTypeId"
+              @change="submitFilters"
             />
           </AFormItem>
         </ACol>
@@ -43,6 +46,7 @@
               size="large"
               placeholder="Состояние"
               v-model:value="filters.wellConditionId"
+              @change="submitFilters"
             />
           </AFormItem>
         </ACol>
@@ -55,47 +59,58 @@
               :show-arrow="true"
               :max-tag-count="5"
               v-model:value="filters.well"
+              @change="submitFilters"
             />
-          </AFormItem>
-        </ACol>
-        <ACol :lg="6" :sm="12" :xs="24">
-          <AFormItem label="Запросить данные">
-            <AButton @click="getFields" size="large" type="primary">Показать</AButton>
           </AFormItem>
         </ACol>
       </ARow>
     </AForm>
-
-    <ADivider> Список месторождений </ADivider>
+    <ADivider> Список скважин </ADivider>
     <DefTable
-      v-if="columns"
+      v-if="oilFields"
       :columns="columns"
       :data-source="oilFields"
       :scroll="{ x: $isMobile ? 1024 : true }"
-    />
+    >
+      <template #bodyCell="{column, record, text}">
+      <template v-if="column.dataIndex === 'action'">
+        <RouterLink :to="{name: 'OilFieldEdit', params: { id: record.id }}">
+          <EditOutlined />
+        </RouterLink>
+      </template>
+      </template>
+    </DefTable>
   </ACard>
 </template>
 
 <script setup>
 import { useStore } from "vuex";
 import { computed, reactive } from "vue";
+import { EditOutlined } from "@ant-design/icons-vue";
 const store = useStore();
 
-let filters = reactive({});
+const filters = reactive({
+  savedId: 1
+});
 
-function getFields() {
+submitFilters();
+
+function submitFilters() {
   store.dispatch("field/getWell", filters);
 }
 
-const oilFields = computed(() => store.getters["field/processedData"]);
+const oilFields = computed(() => store.getters["field/processedList"]);
 
 const columns = [
+  {
+    dataIndex: "action",
+  },
   {
     title: "№",
     dataIndex: "id",
   },
   {
-    title: "Месторождение",
+    title: "Мест-ждение",
     dataIndex: "field",
   },
   {

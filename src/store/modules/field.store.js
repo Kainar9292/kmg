@@ -1,5 +1,5 @@
-import { hasString, searhToId, getLibraryById } from './../../utils/utils' 
-import { HORIZON,WELL_CONDITION, WELL_TYPES } from "../../config/types";
+import { hasString, searhToId, getLibraryById } from '@/utils/utils' 
+import { HORIZON,WELL_CONDITION, WELL_TYPES, STATUS_IN_DATABASE } from "@/config/types";
 
 const state = {
   originalDataInServer: [
@@ -340,15 +340,28 @@ const state = {
     },
   },
 ],
-  field: []
+  field: [],
+  fieldItem: {},
+  errors: null
 };
 
 const mutations = {
-  GET_WELL(state, payload) {
-    state.field = payload;
-  },
-  SET_WELL(state, payload) {
+  ADD_WELL(state, payload) {
     state.originalDataInServer.push(payload)
+  },
+  EDIT_WELL(state, payload) {
+    state.originalDataInServer = payload
+  },
+  start(state) {
+    state.field = []
+    state.fieldItem = {},
+    state.errors = null
+  },
+  success(state, { name, payload }) {
+    state[name] = payload
+  },
+  fail(state, payload) {
+    state.errors = payload
   }
 };
 
@@ -362,19 +375,42 @@ const actions = {
         const getDataInServer = 
               state.originalDataInServer
               .filter(item => { 
-                const hasField = filters.field ? hasString(item.field, filters.field) : true
-                const hasSaved = filters.savedId ? searhToId(item.saved.id, filters.savedId) : true
-                const hasWellType = filters.wellTypeId ? searhToId(item.wellType.id, filters.wellTypeId) : true
-                const hasWellCondition = filters.wellConditionId ? searhToId(item.wellCondition.id, filters.wellConditionId) : true
-                const hasWell = filters.well?.length ? filters.well.some(elem => elem === item.well) : true
+                const hasField = filters?.field ? hasString(item.field, filters.field) : true
+                const hasSaved = filters?.savedId ? searhToId(item.saved.id, filters.savedId) : true
+                const hasWellType = filters?.wellTypeId ? searhToId(item.wellType.id, filters.wellTypeId) : true
+                const hasWellCondition = filters?.wellConditionId ? searhToId(item.wellCondition.id, filters.wellConditionId) : true
+                const hasWell = filters?.well?.length ? filters.well.some(elem => elem === item.well) : true
 
                 return hasField && hasSaved && hasWellType && hasWellCondition && hasWell
               })
-        
-        commit('GET_WELL', getDataInServer)
+
+        commit('success', { name: 'field', payload: getDataInServer })
         resolve(state.getDataInServer)
       } catch (error) {
+
         console.error(error)
+        commit('fail', error)
+        reject(error)
+      }
+    })
+  },
+  getWellItem({ commit }, id) {
+    return new Promise((resolve, reject) => {
+      commit('start')
+      // имитация GET запроса
+      // При вызове реального fetch, использовать chaning Fn (.then)
+      try {
+        // simulation server Fetch / id должен отправляться на сервер и приходить готовый объект
+        const getDataInServer = 
+              state.originalDataInServer
+              .filter(item => item.id === id)[0]
+        
+        commit('success', {name: 'fieldItem', payload: getDataInServer })
+        resolve(state.getDataInServer)
+      } catch (error) {
+
+        console.error(error)
+        commit('fail',error)
         reject(error)
       }
     })
@@ -382,10 +418,10 @@ const actions = {
   createWell({ commit }, data) {
     return new Promise((resolve, reject) => {
       // Имитация пост запроса
-
+      commit('start')
       try {
         const newWell = {
-          id: state.originalDataInServer.length + 1,
+          id: +state.originalDataInServer.length + 1,
           field: data.field,
           horizon: getLibraryById(HORIZON, data.horizonId),
           oilDensity: data.oilDensity,
@@ -395,21 +431,66 @@ const actions = {
           well: data.well,
           wellCondition: getLibraryById(WELL_CONDITION, data.wellConditionId),
           wellType: getLibraryById(WELL_TYPES, data.wellTypeId),
+          saved: getLibraryById(STATUS_IN_DATABASE, data.savedId)
         }
 
-        commit('SET_WELL', newWell)
+        commit('ADD_WELL', newWell)
         resolve(state.getDataInServer)
+
       } catch (error) {
+
         console.error(error)
+        commit('fail',error)
         reject(error)
       } 
     })
-  }
+  },
+  editWellItem({ commit }, {id, data}) {
+    return new Promise((resolve, reject) => {
+      commit('start')
+      // имитация PUT запроса
+      // При вызове реального fetch, использовать chaning Fn (.then)
+      try {
+        // simulation server / id должен отправляться на сервер
+
+        const getDataInServer = 
+              state.originalDataInServer
+              .map(item => {
+                if (item.id === id) {
+                  return {
+                    id: id,
+                    field: data.field,
+                    horizon: getLibraryById(HORIZON, data.horizonId),
+                    oilDensity: data.oilDensity,
+                    oilFlowRate: data.oilFlowRate,
+                    qLiquid: data.qLiquid,
+                    waterCut: data.waterCut,
+                    well: data.well,
+                    wellCondition: getLibraryById(WELL_CONDITION, data.wellConditionId),
+                    wellType: getLibraryById(WELL_TYPES, data.wellTypeId),
+                    saved: getLibraryById(STATUS_IN_DATABASE, data.savedId)
+                  }
+                } else {
+                  return item
+                }
+              })
+
+        commit('EDIT_WELL', getDataInServer )
+        resolve(state.getDataInServer)
+      } catch (error) {
+
+        console.error(error)
+        commit('fail',error)
+        reject(error)
+      }
+    })
+  },
 };
 
 const getters = {
-  processedData: (state) => state.field,
-  all: (state) => state.originalDataInServer
+  all: (state) => state.originalDataInServer,
+  processedList: (state) => state.field,
+  processedItem: (state) => state.fieldItem,
 };
 
 export default {

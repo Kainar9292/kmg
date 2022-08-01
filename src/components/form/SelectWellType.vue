@@ -3,8 +3,8 @@
 </template>
 
 <script setup>
-import { WELL_TYPES } from "../../config/types";
-import { extendForSelect } from "../../utils/utils";
+import { WELL_TYPES } from "@/config/types";
+import { extendForSelect } from "@/utils/utils";
 import { reactive } from "vue";
 
 const state = reactive({

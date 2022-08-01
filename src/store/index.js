@@ -14,6 +14,6 @@ export default createStore({
     other
   },
   plugins: [createPersistedState({
-    paths: ['other'],
+    paths: ['other', 'field'],
   })],
 });

@@ -3,8 +3,8 @@
 </template>
 
 <script setup>
-import { FIELD_LIST } from "../../config/types";
-import { extendForSelect } from "../../utils/utils";
+import { FIELD_LIST } from "@/config/types";
+import { extendForSelect } from "@/utils/utils";
 import { reactive } from "vue";
 
 const state = reactive({

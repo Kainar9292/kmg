@@ -16,13 +16,20 @@ export const routes = [
       title: 'Список скважин'
     }
   },
-
-    {
+  {
     path: '/oil-field/add',
     name: 'OilFieldAdd',
     component: () => import('../pages/oil-field/OilFieldAdd.vue'),
-        meta: {
-      title: 'Добавить скважину'
+      meta: {
+        title: 'Добавить скважину'
+    }
+  },
+  {
+    path: '/oil-field/edit/:id',
+    name: 'OilFieldEdit',
+    component: () => import('../pages/oil-field/OilFieldEdit.vue'),
+      meta: {
+        title: 'Редактировать скважину'
     }
   },
 ];

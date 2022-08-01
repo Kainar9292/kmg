@@ -22,13 +22,13 @@
 
 <script setup>
 import { FireOutlined, PieChartOutlined } from "@ant-design/icons-vue";
-import { ref, watch } from "vue";
-
+import { ref, watch, computed } from "vue";
+import { useRoute} from 'vue-router'
 import { useStore } from "vuex";
-const store = useStore();
 
+const store = useStore();
 const selectKeyInStore = store.getters["other/path"];
-const selectedKeys = ref([selectKeyInStore || "Statistics"]);
+const selectedKeys = ref([selectKeyInStore]);
 
 watch(
   selectedKeys,
@@ -37,10 +37,6 @@ watch(
   },
   { immediate: true }
 );
-
-const props = defineProps({
-  activeKey: String,
-});
 </script>
 
 <style lang="scss">

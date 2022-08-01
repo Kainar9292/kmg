@@ -11,6 +11,7 @@
         <AFormItem label="Выберите месторождение" name="field">
           <SelectField
             size="large"
+            :disabled="isEditing"
             placeholder="Месторождение"
             v-model:value="form.field"
           />
@@ -50,9 +51,11 @@
       </ACol>
       <ACol :lg="8" :md="18" :xs="24">
         <AFormItem label="Q жидкости" name="qLiquid">
-          <AInput
+          <AInputNumber
             size="large"
-            type="number"
+            :step="0.01"
+            :precision="2"
+            :min="0"
             placeholder="Q"
             v-model:value="form.qLiquid"
           />
@@ -60,9 +63,11 @@
       </ACol>
       <ACol :lg="8" :md="18" :xs="24">
         <AFormItem label="Обводненность" name="waterCut">
-          <AInput
+          <AInputNumber
             size="large"
-            type="number"
+            :step="0.01"
+            :precision="2"
+            :min="0"
             placeholder="Обводненность"
             v-model:value="form.waterCut"
           />
@@ -70,9 +75,11 @@
       </ACol>
       <ACol :lg="8" :md="18" :xs="24">
         <AFormItem label="Плотность нефти" name="oilDensity">
-          <AInput
+          <AInputNumber
             size="large"
-            type="number"
+            :step="0.01"
+            :precision="2"
+            :min="0"
             placeholder="Плотность"
             v-model:value="form.oilDensity"
           />
@@ -80,12 +87,24 @@
       </ACol>
       <ACol :lg="8" :md="18" :xs="24">
         <AFormItem label="Дебит нефти" name="oilFlowRate">
-          <AInput
+          <AInputNumber
             size="large"
-            type="number"
+            :step="0.01"
+            :precision="2"
+            :min="0"
             placeholder="Дебит"
             v-model:value="form.oilFlowRate"
           />
+        </AFormItem>
+      </ACol>
+      <ACol :lg="8" :md="18" :xs="24">
+        <AFormItem label="Статус в БД" name="savedId">
+            <SelectAvailability
+              size="large"
+              :allow-clear="false"
+              v-model:value="form.savedId"
+              placeholder="Статус"
+            />
         </AFormItem>
       </ACol>
     </ARow>
@@ -93,10 +112,20 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
-import { vvRequired } from "./../../../config/validation-rules";
+import { reactive, onMounted, computed } from "vue";
+import { vvRequired } from "@/config/validation-rules";
+import { useStore } from "vuex";
 
+const props = defineProps({
+  dataId: Number,
+});
+
+const store = useStore()
+
+const isEditing = computed(() => !!props.dataId);
 const emit = defineEmits(["submit"]);
+
+
 const formRules = {
   field: [vvRequired],
   well: [vvRequired],
@@ -107,8 +136,29 @@ const formRules = {
   qLiquid: [vvRequired],
   oilDensity: [vvRequired],
   oilFlowRate: [vvRequired],
+  savedId: [vvRequired],
 };
 const form = reactive({});
+
+onMounted(() => {
+  if (isEditing.value)
+    store.dispatch("field/getWellItem", props.dataId)
+      .then(() => {
+        const wellItem = store.state.field.fieldItem
+
+        form.field = wellItem.field
+        form.well = wellItem.well
+        form.wellTypeId = wellItem.wellType.id
+        form.wellConditionId = wellItem.wellCondition.id
+        form.horizonId = wellItem.horizon.id
+        form.qLiquid = wellItem.qLiquid
+        form.waterCut = wellItem.waterCut
+        form.oilDensity = wellItem.oilDensity
+        form.oilFlowRate = wellItem.oilFlowRate
+        form.savedId = wellItem.saved.id
+      }
+    )
+});
 
 function onFinish(values) {
   emit("submit", values);

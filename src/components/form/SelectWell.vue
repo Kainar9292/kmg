@@ -3,8 +3,8 @@
 </template>
 
 <script setup>
-import { WELL_TYPES } from "../../config/types";
-import { extendForSelect, removeDuplicates } from "../../utils/utils";
+import { WELL_TYPES } from "@/config/types";
+import { extendForSelect, removeDuplicates } from "@/utils/utils";
 import { useStore } from "vuex";
 import { computed, reactive } from "vue";
 
@@ -13,8 +13,8 @@ const store = useStore();
 const selectOptions = computed(() => {
   const options = store.getters["field/all"].map((field) => {
     return {
-      label: field.well,
-      value: field.well,
+      label: field?.well,
+      value: field?.well,
     };
   });
 
