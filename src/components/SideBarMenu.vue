@@ -28,7 +28,7 @@ import { useStore } from "vuex";
 
 const store = useStore();
 const selectKeyInStore = store.getters["other/path"];
-const selectedKeys = ref([selectKeyInStore]);
+const selectedKeys = ref([selectKeyInStore || 'Statistics'] );
 
 watch(
   selectedKeys,
