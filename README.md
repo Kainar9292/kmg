@@ -10,7 +10,7 @@ npm run build - production,
 
 Test link:
 
-https://kainar9292.github.io/kmg/dist/
+https://kainar9292.github.io/kmg/
 
 ## Recommended IDE Setup
 
