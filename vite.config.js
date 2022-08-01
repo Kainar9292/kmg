@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: "https://kainar9292.github.io/kmg/",
+  base: "https://kainar9292.github.io/kmg/dist/",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
